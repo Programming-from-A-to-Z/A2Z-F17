@@ -85,7 +85,7 @@ This course focuses on programming strategies and techniques behind procedural a
 
 ## Week 8 - Text Generation: N-Grams, Markov chains, and LSTMs
 * [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
-* [Notes on Machine Learning - RNN/LSTM](https://github.com/shiffman/A2Z-F17/wiki/LSTM-RNN-Notes)
+* [Notes on Machine Learning - RNN/LSTM](https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/blob/master/week6-rnn-tensorflow/README.md)
 * What is an N-Gram?
 * What is Markov Chain?
   * order
