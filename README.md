@@ -67,16 +67,25 @@ This course focuses on programming strategies and techniques behind procedural a
 
 ## Week 5 - Text Analysis Workshop
 * [Notes on text analysis](http://shiffman.net/a2z/text-analysis/)
-* In class, we'll build a simple concordance together as well as demonstrate and discuss TF/IDF and Bayesian analysis.
+* In class, we'll build a simple concordance together as well as demonstrate and discuss TF/IDF, Bayesian analysis, and word2vec. 
 * Simple Concordance
 * TF/IDF
 * Bayesian Analysis
+* Word2Vec
 * Node text analysis packages
 
 ## Week 6 - Show Twitter Bots
 
-## Week 7 - Text Generation: N-Grams and Markov chains
+## Week 7 - Text Generation: Grammars
+* [Notes on Context-Free Grammar](http://shiffman.net/a2z/cfg)
+* Tracery by Kate Compton
+* Context free grammars
+* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
+
+
+## Week 8 - Text Generation: N-Grams, Markov chains, and LSTMs
 * [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
+* [Notes on Machine Learning - RNN/LSTM](https://github.com/shiffman/A2Z-F17/wiki/LSTM-RNN-Notes)
 * What is an N-Gram?
 * What is Markov Chain?
   * order
@@ -85,11 +94,6 @@ This course focuses on programming strategies and techniques behind procedural a
   * client-side vs. server-side generation
 * [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-7-Homework)
 
-## Week 8 - Text Generation: Grammars
-* [Notes on Context-Free Grammar](http://shiffman.net/a2z/cfg)
-* Tracery by Kate Compton
-* Context free grammars
-* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
 
 ## Week 9 - Building your own API in Node
 * [Notes on API in Node](http://shiffman.net/a2z/node-api/)
@@ -117,7 +121,6 @@ This course focuses on programming strategies and techniques behind procedural a
 * [Proposal links and schedule](https://github.com/shiffman/A2Z-F17/wiki/Final-Project-Proposals)
 
 ## Week 12 - Final Project Proposals part 2
-* [Notes on Machine Learning - RNN/LSTM](https://github.com/shiffman/A2Z-F17/wiki/LSTM-RNN-Notes)
 * [Proposal links and schedule](https://github.com/shiffman/A2Z-F17/wiki/Final-Project-Proposals)
 
 ## Week 13 - [User Testing](https://github.com/shiffman/A2Z-F17/wiki/User-Testing)
