@@ -8,7 +8,7 @@ This course focuses on programming strategies and techniques behind procedural a
 - [Office Hours](https://itp.nyu.edu/inwiki/Signup/Shiffman)
 
 ## Mailing List
-* [Join ITP A2Z Google Group](https://groups.google.com/a/nyu.edu/forum/#!forum/a2z-group/). 
+* [Join ITP A2Z Google Group](https://groups.google.com/a/nyu.edu/forum/#!forum/a2z-group/).
 
 ## Week 1 - Intro
 * [Notes and Examples](http://shiffman.net/a2z/intro/)
@@ -17,6 +17,11 @@ This course focuses on programming strategies and techniques behind procedural a
 * Strings in JS
 * Text input (from user, from file)
 * Client-side vs. Server-side programming
+* Workflow videos:
+    *[Sublime Text and Python Server](https://www.youtube.com/watch?v=UCHzlUiDD10)
+    *[Atom and Node Server](https://www.youtube.com/watch?v=d3OcFexe9Ik)
+    *[Brackets](https://www.youtube.com/watch?v=nmZbhManVcY)
+    *[Codepen](https://www.youtube.com/watch?v=5gfUgNpS6kY)
 * [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-1-Homework)
 
 ## Week 2 -- Regular Expressions
@@ -67,7 +72,7 @@ This course focuses on programming strategies and techniques behind procedural a
 
 ## Week 5 - Text Analysis Workshop
 * [Notes on text analysis](http://shiffman.net/a2z/text-analysis/)
-* In class, we'll build a simple concordance together as well as demonstrate and discuss TF/IDF, Bayesian analysis, and word2vec. 
+* In class, we'll build a simple concordance together as well as demonstrate and discuss TF/IDF, Bayesian analysis, and word2vec.
 * Simple Concordance
 * TF/IDF
 * Bayesian Analysis
