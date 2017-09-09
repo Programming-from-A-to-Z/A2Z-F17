@@ -3,7 +3,7 @@
 // https://github.com/shiffman/A2Z-F16
 // http://shiffman.net/a2z
 
-var link;
+let link;
 
 function setup() {
   noCanvas();
@@ -17,19 +17,19 @@ function setup() {
 }
 
 function mOver() {
-  var heading = select('#heading');
+  let heading = select('#heading');
   heading.html('mouse over!');
 }
 
 function mOut() {
-  var heading = select('#heading');
+  let heading = select('#heading');
   heading.html('mouse out!');
 }
 
 function changeBG() {
-  var heading = select('#heading');
-  var r = floor(random(255));
-  var b = floor(random(255));
-  var col = 'rgb(' + r + ',0,' + b + ')';
+  let heading = select('#heading');
+  let r = floor(random(255));
+  let b = floor(random(255));
+  let col = 'rgb(' + r + ',0,' + b + ')';
   heading.style('background-color', col);
 }

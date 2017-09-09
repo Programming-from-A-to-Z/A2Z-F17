@@ -7,23 +7,23 @@
 function process(data) {
 
   // All of the words as an array
-  var words = splitTokens(data, ' .,:;!@#$%&*()\n');
+  let words = splitTokens(data, ' .,:;!@#$%&*()\n');
   // All of the words in the seed phrase as an array
-  var seeds = split(seedInput.value(), ' ');
+  let seeds = split(seedInput.value(), ' ');
   // The output
-  var output = '';
+  let output = '';
 
   // For every seed word
-  for (var n = 0; n < seeds.length; n++) {
-    var seed = seeds[n].toLowerCase();
+  for (let n = 0; n < seeds.length; n++) {
+    let seed = seeds[n].toLowerCase();
     // Check each character
-    for (var i = 0; i < seed.length; i++) {
-      var c = seed.charAt(i);
-      var found = false;
+    for (let i = 0; i < seed.length; i++) {
+      let c = seed.charAt(i);
+      let found = false;
       // random order
       words = shuffle(words);
       // Find a word with a character in the same spot as the seed
-      for (var j = 0; j < words.length; j++) {
+      for (let j = 0; j < words.length; j++) {
         if (words[j].toLowerCase().charAt(i) === c) {
           // if it's found, add it to the output
           output += words[j] + ' ';
@@ -39,7 +39,7 @@ function process(data) {
   }
 
   // Make a paragraph with the output text
-  var par = createP(output);
+  let par = createP(output);
   par.class('text');
   paragraphs.push(par);
 }
@@ -47,7 +47,7 @@ function process(data) {
 // A function to shuffle an array
 // From: http://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
-  var m = array.length, t, i;
+  let m = array.length, t, i;
 
   // While there remain elements to shuffle…
   while (m) {

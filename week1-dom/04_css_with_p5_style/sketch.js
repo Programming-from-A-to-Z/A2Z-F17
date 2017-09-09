@@ -7,7 +7,7 @@
 
 function setup() {
   noCanvas();
-  var text = createP('This is a paragraph element.');
+  let text = createP('This is a paragraph element.');
 
   // With the style method we can pass in CSS directly in our code
   text.style('font-family', 'monospace');

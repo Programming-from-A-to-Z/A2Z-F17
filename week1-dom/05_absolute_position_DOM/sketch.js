@@ -8,12 +8,12 @@ function setup() {
 
   // windowWidth and windowHeight are variables
   // for the browser page width and height
-  for (var i = 0; i < 500; i++) {
-    var div = createDiv('p5');
+  for (let i = 0; i < 500; i++) {
+    let div = createDiv('p5');
     div.style('padding', '12px');
-    var r = floor(random(200, 255));
-    var b = floor(random(150, 200));
-    var col = 'rgb(' + r + ',0,' + b + ')';
+    let r = floor(random(200, 255));
+    let b = floor(random(150, 200));
+    let col = 'rgb(' + r + ',0,' + b + ')';
     div.style('background-color', col);
     div.style('font-family', 'monospace');
     div.style('color', '#FFF');

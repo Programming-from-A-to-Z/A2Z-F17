@@ -7,15 +7,15 @@
 function process(data) {
 
   // Split into words
-  var words = splitTokens(data, ' .,:;!@#$%&*()\n');
+  let words = splitTokens(data, ' .,:;!@#$%&*()\n');
 
   // Shuggle the array randomly
   words = shuffle(words);
 
   // Create a new string to store the "cut-up"
-  var output = '';
+  let output = '';
   // For every word
-  for (var i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length; i++) {
     // Randomly choose to include it based on
     // percentage
     if (random(100) < percent) {
@@ -24,7 +24,7 @@ function process(data) {
   }
 
   // Display the cut-up in a paragraph element
-  var txt = createP(output);
+  let txt = createP(output);
   txt.class('text');
   paragraphs.push(txt);
 }
@@ -33,7 +33,7 @@ function process(data) {
 // A function to shuffle an array
 // From: http://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
-  var m = array.length, t, i;
+  let m = array.length, t, i;
 
   // While there remain elements to shuffle…
   while (m) {

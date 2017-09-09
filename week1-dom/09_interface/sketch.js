@@ -3,17 +3,17 @@
 // https://github.com/shiffman/A2Z-F16
 // http://shiffman.net/a2z
 
-var divs = [];
-var slider;
-var checkbox;
-var dropdown;
-var input;
+let divs = [];
+let slider;
+let checkbox;
+let dropdown;
+let input;
 
 
 function setup() {
   noCanvas();
 
-  var divButton = createButton('make a div');
+  let divButton = createButton('make a div');
   divButton.mousePressed(makeDiv);
 
   slider = createSlider(1, 48, 12);
@@ -25,16 +25,16 @@ function setup() {
 
   input = createInput('your name');
 
-  var clearButton = createButton('clear');
+  let clearButton = createButton('clear');
   clearButton.mousePressed(function() {
-    for (var i = 0; i < divs.length; i++) {
+    for (let i = 0; i < divs.length; i++) {
       divs[i].remove();
     }
   });
 }
 
 function makeDiv() {
-  var div;
+  let div;
 
   if (dropdown.selected() === 'date') {
     div = createDiv(input.value() + ', this div was made at ' + Date());
@@ -51,7 +51,7 @@ function makeDiv() {
 }
 
 // function changeSize() {
-//   for (var i = 0; i < divs.length; i++) {
+//   for (let i = 0; i < divs.length; i++) {
 //     divs[i].style('font-size', slider.value() + 'pt');
 //   }
 // }

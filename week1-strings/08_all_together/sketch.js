@@ -4,10 +4,10 @@
 // http://shiffman.net/a2z
 
 // Many DOM elements
-var dropZone, input, button, sample, clearButton;
+let dropZone, input, button, sample, clearButton;
 
 // An array to keep track of all the new DOM elements being added
-var paragraphs = [];
+let paragraphs = [];
 
 function setup() {
 
@@ -43,7 +43,7 @@ function loadFile() {
 }
 // When the file is loaded
 function fileLoaded(data) {
-  var txt = data.join('\n');
+  let txt = data.join('\n');
   // Note the use of a function that will "process" the text
   // This is b/c the text might come in a number of different ways
   process(txt);
@@ -75,14 +75,14 @@ function handleInput() {
 // Processing the text in this example isn't anything
 // Just spitting it back out in the window
 function process(txt) {
-  var par = createP(txt);
+  let par = createP(txt);
   par.class('text');
   paragraphs.push(par);
 }
 
 // Clear all the divs with remove()
 function clearText() {
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].remove();
   }
   paragraphs = [];

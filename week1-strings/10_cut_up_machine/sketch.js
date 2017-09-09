@@ -4,17 +4,17 @@
 // http://shiffman.net/a2z
 
 // This example also includes a slider
-var slider;
+let slider;
 // Variable to keep track of slider value (a bit redundant)
-var percent = 5;
+let percent = 5;
 
 // Many DOM elements
-var dropZone, input, button, sample, clearButton;
+let dropZone, input, button, sample, clearButton;
 
 // An array to keep track of all the new DOM elements being added
-var paragraphs = [];
+let paragraphs = [];
 
-var inputText = '';
+let inputText = '';
 
 function setup() {
 
@@ -54,7 +54,7 @@ function loadFile() {
 }
 // When the file is loaded
 function fileLoaded(data) {
-  var txt = data.join('\n');
+  let txt = data.join('\n');
 
   input.html(txt);
   // Note the use of a function that will "process" the text
@@ -90,7 +90,7 @@ function handleInput() {
 // Clear all the divs with remove()
 function clearText() {
   input.html('');
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].remove();
   }
   paragraphs = [];
@@ -98,7 +98,7 @@ function clearText() {
 
 // Handle event when slider changes
 function changePercent() {
-  var span = select('#percent');
+  let span = select('#percent');
   // Set global variable for use
   percent = slider.value();
   // Update the span element to display in browser

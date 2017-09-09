@@ -9,16 +9,16 @@ function process(data) {
   // I'm doing something special here with a regex
   // To keep the delimiter, you have to use regex
   // more about this next week
-  // var words = data.split(/([ .,:;!@#$%&*()\n])/);
+  // let words = data.split(/([ .,:;!@#$%&*()\n])/);
 
-  var words = splitTokens(data, ' .,:;!@#$%&*()\n');
+  let words = splitTokens(data, ' .,:;!@#$%&*()\n');
 
-  var par = createP('');
+  let par = createP('');
   par.class('text');
 
   // Here each word is made into a div
-  for (var i = 0; i < words.length; i++) {
-    var div = createDiv(words[i] + ' ');
+  for (let i = 0; i < words.length; i++) {
+    let div = createDiv(words[i] + ' ');
     // This keeps it looking like regular text
     div.style('display', 'inline');
     // This makes it look clickable

@@ -1,16 +1,16 @@
 // Some HTML
-var words;
+let words;
 
-var x;
-var y;
-var xspeed = 5;
-var yspeed = -2;
+let x;
+let y;
+let xspeed = 5;
+let yspeed = -2;
 
-var gravity = 1;
+let gravity = 1;
 
-var fsize = 48;
+let fsize = 48;
 
-var locked = false;
+let locked = false;
 
 function setup() {
   noCanvas();

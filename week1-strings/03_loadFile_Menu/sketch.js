@@ -9,23 +9,23 @@ function setup() {
   // that can be used to select files
   // The first argument is the callback function
   // The 'multiple' flag allows more than one file to be selected
-  var fileSelect = createFileInput(gotFile, 'multiple');
+  let fileSelect = createFileInput(gotFile, 'multiple');
 }
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
   // Make a div to display info about the file
-  var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
+  let fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
   // Assign a CSS class for styling (see index.html)
   fileDiv.class('file');
 
   // Hanlde image and text differently
   if (file.type === 'image') {
-    var img = createImg(file.data);
+    let img = createImg(file.data);
     img.class('thumb');
   } else if (file.type === 'text') {
     // Make a paragraph of text
-    var par = createP(file.data);
+    let par = createP(file.data);
     par.class('text');
   }
 }

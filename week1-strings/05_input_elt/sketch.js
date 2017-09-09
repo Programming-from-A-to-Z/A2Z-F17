@@ -5,7 +5,7 @@
 
 // Adapted from: http://p5js.org/examples/examples/Dom_Input_and_Button.php
 
-var input, button, greeting;
+let input, button, greeting;
 
 function setup() {
 
@@ -37,6 +37,6 @@ function greetTyping() {
 }
 
 function greet() {
-  var name = input.value();
-  var par = createP('hello '+ name + '!');
+  let name = input.value();
+  let par = createP('hello '+ name + '!');
 }

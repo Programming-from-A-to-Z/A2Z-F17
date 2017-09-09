@@ -5,7 +5,7 @@
 
 // Adapted from: http://p5js.org/examples/examples/Dom_Input_and_Button.php
 
-var input, button, greeting;
+let input, button, greeting;
 
 function setup() {
 
@@ -25,11 +25,11 @@ function setup() {
 // and have the elements animate?
 function greet() {
   background(51);
-  var name = input.value();
+  let name = input.value();
   greeting.html('hello '+name+'!');
   input.value('');
 
-  for (var i=0; i < 200; i++) {
+  for (let i=0; i < 200; i++) {
     push();
     fill(random(255), 255, 255);
     translate(random(width), random(height));

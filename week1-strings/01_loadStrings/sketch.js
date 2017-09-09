@@ -4,9 +4,9 @@
 // http://shiffman.net/a2z
 
 // Variable for array of lines
-var lines;
+let lines;
 // Variable where we'll join all the text together
-var txt;
+let txt;
 
 // Anything in preload will finish before setup() is triggered
 function preload() {
@@ -19,6 +19,6 @@ function setup() {
   // join() joins the elements of an array
   // Here we pass in a line break to retain formatting
   txt = join(lines, '<br/>');
-  var par = createP(txt);
+  let par = createP(txt);
   par.id('text');
 }

@@ -4,7 +4,7 @@
 // http://shiffman.net/a2z
 
 // Variable where we'll join all the text together
-var text;
+let text;
 
 function setup() {
   noCanvas();
@@ -20,6 +20,6 @@ function fileready(lines) {
   // join() joins the elements of an array
   // Here we pass in a line break to retain formatting
   text = lines.join('<br/>');
-  var par = createP(text);
+  let par = createP(text);
   par.id('text');
 }
