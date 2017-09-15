@@ -19,7 +19,7 @@ function gotFile(file) {
   // Assign a CSS class for styling (see index.html)
   fileDiv.class('file');
 
-  // Hanlde image and text differently
+  // Handle image and text differently
   if (file.type === 'image') {
     let img = createImg(file.data);
     img.class('thumb');
