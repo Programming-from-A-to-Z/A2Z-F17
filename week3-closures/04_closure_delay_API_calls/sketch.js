@@ -4,8 +4,6 @@
 
 // API documentation
 // http://developer.nytimes.com
-// Weirdly it seems to work with 'sample-key'
-// But you should probably get your own
 
 // Count term appearance in times per year
 var start, end, total, w;
