@@ -4,9 +4,9 @@
 
 // Adapted from: http://p5js.org/examples/examples/Dom_Input_and_Button.php
 
-var input, button, greeting;
+let input, button, greeting;
 
-var txt;
+let txt;
 
 function setup() {
 
@@ -28,10 +28,10 @@ function setup() {
 }
 
 function process() {
-  var sentence = input.value();
-  var rs = new RiString(sentence);
-  
+  let sentence = input.value();
+  let rs = new RiString(sentence);
+
   createP("Parts of speech: " + rs.get('pos'));
 
-  //var par = createP('hello '+ name + '!');
+  //let par = createP('hello '+ name + '!');
 }

@@ -9,16 +9,16 @@ function process(txt) {
 
   // A regex to match href='link'>name</a> capturing link and name
   // Make sure we have /g
-  var regex = /href\s*=\s*['"](.*?)['"].*?>(.*?)<\/a>/gi;
+  let regex = /href\s*=\s*['"](.*?)['"].*?>(.*?)<\/a>/gi;
 
   // Fill this array
-  var links = [];
-  
+  let links = [];
+
   // We have to use exec and loop because of the capturing group
-  var match = regex.exec(txt);
+  let match = regex.exec(txt);
   while (match != null) {
     // Making an object out of the two captured groups
-    var link = {
+    let link = {
       href: match[1],
       name: match[2]
     }
@@ -26,15 +26,15 @@ function process(txt) {
     match = regex.exec(txt);
   }
 
-  var list = createElement('ol');
-  for (var i = 0; i < links.length; i++) {
-    var link = createElement('li','');
-    var a = createA(links[i].href, links[i].name);
+  let list = createElement('ol');
+  for (let i = 0; i < links.length; i++) {
+    let link = createElement('li','');
+    let a = createA(links[i].href, links[i].name);
     a.parent(link);
     link.parent(list);
   }
 
-  var par = createP('');
+  let par = createP('');
   par.class('text');
   par.child(list);
   paragraphs.push(par);
@@ -47,15 +47,15 @@ function process(txt) {
 
 
 // Many DOM elements
-var dropZone, input, button, sample, clearButton;
+let dropZone, input, button, sample, clearButton;
 
 // Checkboxes and regex input
-var regexInput, globalCheck, caseCheck;
+let regexInput, globalCheck, caseCheck;
 
 // An array to keep track of all the new DOM elements being added
-var paragraphs = [];
+let paragraphs = [];
 
-var inputText = '';
+let inputText = '';
 
 function setup() {
 
@@ -95,7 +95,7 @@ function loadFile() {
 }
 // When the file is loaded
 function fileLoaded(data) {
-  var txt = data.join('\n');
+  let txt = data.join('\n');
 
   input.html(txt);
   // Note the use of a function that will "process" the text
@@ -132,7 +132,7 @@ function handleInput() {
 function clearText() {
   input.html('');
   intputText = '';
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].remove();
   }
   paragraphs = [];

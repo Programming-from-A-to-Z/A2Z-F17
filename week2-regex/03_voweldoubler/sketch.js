@@ -8,15 +8,15 @@
 function process(txt) {
   // A regex to match any vowel
   // Captured as group #1
-  var regex = /([aeiou])/gi;         
-  
+  let regex = /([aeiou])/gi;
+
   // This one is for doubling words
-  // var regex = /(\b\w+\b)/gi;         
-  
+  // let regex = /(\b\w+\b)/gi;
+
   // Replacing the vowel with two of itself
-  var output = txt.replace(regex, '$1$1');
+  let output = txt.replace(regex, '$1$1');
   // Update the HTML Element
-  var par = createP(output);
+  let par = createP(output);
   par.class('text');
   paragraphs.push(par);
 }
@@ -28,12 +28,12 @@ function process(txt) {
 
 
 // Many DOM elements
-var dropZone, input, button, sample, clearButton;
+let dropZone, input, button, sample, clearButton;
 
 // An array to keep track of all the new DOM elements being added
-var paragraphs = [];
+let paragraphs = [];
 
-var inputText = '';
+let inputText = '';
 
 function setup() {
 
@@ -69,7 +69,7 @@ function loadFile() {
 }
 // When the file is loaded
 function fileLoaded(data) {
-  var txt = data.join('\n');
+  let txt = data.join('\n');
 
   input.html(txt);
   // Note the use of a function that will "process" the text
@@ -106,7 +106,7 @@ function handleInput() {
 function clearText() {
   input.html('');
   intputText = '';
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].remove();
   }
   paragraphs = [];

@@ -8,17 +8,17 @@
 function process(txt) {
   // Using match() from String is the simplest way to do this
   // Regex that matches double words, note use of global flag
-  var regex = /\b(\w+)\b\s+\1\b/g;         
-  var results = txt.match(regex);
+  let regex = /\b(\w+)\b\s+\1\b/g;
+  let results = txt.match(regex);
 
 
-  var par = createP('');
+  let par = createP('');
   if (results === null) {
     par.html('none found!');
   } else {
     // We get an array of matches back
-    var output = '';
-    for (var i = 0; i < results.length; i++) {
+    let output = '';
+    for (let i = 0; i < results.length; i++) {
       output += results[i] + '<br/>';
     }
     // Update the HTML Element
@@ -31,7 +31,7 @@ function process(txt) {
 
 function doublewords() {
   // What has the user entered?
-  var text = input.value();
+  let text = input.value();
 
 }
 
@@ -42,12 +42,12 @@ function doublewords() {
 
 
 // Many DOM elements
-var dropZone, input, button, sample, clearButton;
+let dropZone, input, button, sample, clearButton;
 
 // An array to keep track of all the new DOM elements being added
-var paragraphs = [];
+let paragraphs = [];
 
-var inputText = '';
+let inputText = '';
 
 function setup() {
 
@@ -83,7 +83,7 @@ function loadFile() {
 }
 // When the file is loaded
 function fileLoaded(data) {
-  var txt = data.join('\n');
+  let txt = data.join('\n');
 
   input.html(txt);
   // Note the use of a function that will "process" the text
@@ -120,7 +120,7 @@ function handleInput() {
 function clearText() {
   input.html('');
   intputText = '';
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].remove();
   }
   paragraphs = [];

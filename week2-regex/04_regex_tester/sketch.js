@@ -7,30 +7,30 @@
 // Here is where we are working with a regex
 function process(txt) {
 
-  var flags = '';
+  let flags = '';
   if (globalCheck.elt.checked) {
     flags += 'g';
   }
   if (caseCheck.elt.checked) {
     flags += 'i';
   }
-  
-  var regex = new RegExp(regexInput.value(), flags);
-  console.log(regex);  
 
-  var results = txt.match(regex);
+  let regex = new RegExp(regexInput.value(), flags);
+  console.log(regex);
+
+  let results = txt.match(regex);
   console.log(results);
 
-  var output = '';
+  let output = '';
   if (results) {
-    for (var i = 0; i < results.length; i++) {
+    for (let i = 0; i < results.length; i++) {
       output += results[i] + '<br/>';
     }
   } else {
     output = 'No matches found';
   }
 
-  var par = createP(output);
+  let par = createP(output);
   par.class('text');
   paragraphs.push(par);
 }
@@ -42,15 +42,15 @@ function process(txt) {
 
 
 // Many DOM elements
-var dropZone, input, button, sample, clearButton;
+let dropZone, input, button, sample, clearButton;
 
 // Checkboxes and regex input
-var regexInput, globalCheck, caseCheck;
+let regexInput, globalCheck, caseCheck;
 
 // An array to keep track of all the new DOM elements being added
-var paragraphs = [];
+let paragraphs = [];
 
-var inputText = '';
+let inputText = '';
 
 function setup() {
 
@@ -90,7 +90,7 @@ function loadFile() {
 }
 // When the file is loaded
 function fileLoaded(data) {
-  var txt = data.join('\n');
+  let txt = data.join('\n');
 
   input.html(txt);
   // Note the use of a function that will "process" the text
@@ -127,7 +127,7 @@ function handleInput() {
 function clearText() {
   input.html('');
   intputText = '';
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].remove();
   }
   paragraphs = [];
