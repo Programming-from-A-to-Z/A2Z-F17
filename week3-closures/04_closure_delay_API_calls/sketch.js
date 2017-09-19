@@ -1,20 +1,3 @@
-// // Built by LucyBot. www.lucybot.com
-// function setup() {
-//   var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-//   url += '?' + $.param({
-//     'api-key': "99cfea65a5bb30650b3d31eb1713233e:15:73386102",
-//     'q': "fruit"
-//   });
-//   $.ajax({
-//     url: url,
-//     method: 'GET',
-//   }).done(function(result) {
-//     console.log(url);
-//     console.log(result);
-//   }).fail(function(err) {
-//     throw err;
-//   });
-// }
 // A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
@@ -36,14 +19,10 @@ function makeURL(term, year) {
   //var api = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&';
   var query = '&q=' + term + '&facet_field=source&begin_date=' + year + '0101&end_date=' + year + '1231&facet_filter=true';
   var url = api + apikey + query;
-  console.log(url);
   return url;
 }
 
 function setup() {
-
-  var url = makeURL('computer', '2015');
-  goJSON(url, 0);
 
   // A canvas for drawing!
   var canvas = createCanvas(800, 200);
@@ -66,7 +45,6 @@ function setup() {
 
 // This callback is for when the user clicks the button
 function searchIt() {
-  console.log('go');
   background(0);
 
   // Reset total number of API calls to zero
