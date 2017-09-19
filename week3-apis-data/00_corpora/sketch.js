@@ -2,16 +2,16 @@
 // Daniel Shiffman
 // http://shiffman.net/a2z
 
-var emojis;
+let emojis;
 
 function setup() {
   noCanvas();
   loadJSON('sea_emoji.json', gotEmoji);
 
-  var button = select('#button');
+  let button = select('#button');
   // Demonstrating anonymous function
   button.mousePressed(function() {
-    var span = createSpan(random(emojis))
+    let span = createSpan(random(emojis))
     // Demonstrating chaining
     span.style('font-size','64px').parent('emojis');
   });

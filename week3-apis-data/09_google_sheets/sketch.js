@@ -21,10 +21,10 @@ function setup() {
     // This is the URL for my google sheet
     // The sheet is generated from this form: http://goo.gl/forms/0X67GZJTZJ
     // The sheet must set to File --> Published for the Web
-    var url = 'https://docs.google.com/spreadsheets/d/1YQ7js53a5Gdidi3XS5HxkDvHWgmAS1kCCi9NnmH7Uc0/pubhtml';
+    let url = 'https://docs.google.com/spreadsheets/d/1YQ7js53a5Gdidi3XS5HxkDvHWgmAS1kCCi9NnmH7Uc0/pubhtml';
 
     // Tabletop expects some settings
-    var settings = {
+    let settings = {
         key: url,            // The url of the published google sheet
         callback: gotData,   // A callback for when the data comes in
         simpleSheet: true    // This makes things simpler for just a single worksheet of rows
@@ -41,13 +41,13 @@ function setup() {
         console.log(data);
 
         // Make an HTML list
-        var list = createElement('ol');
+        let list = createElement('ol');
         list.parent('data');
-        for (var i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
 
-            var label = data[i].label;
-            var number = data[i].Number;
-            var timestamp = data[i].Timestamp;
+            let label = data[i].label;
+            let number = data[i].Number;
+            let timestamp = data[i].Timestamp;
 
             // Sanitize user input with RegEx:
             // - Stop users from injecting malicious Javascript into the page via the values spreadsheet
@@ -59,10 +59,9 @@ function setup() {
                 && /^((\d{1,2}\/){2}\d{4} \d{1,2}(:\d{2}){2})?$/.test(timestamp)    // MM/DD/YYYY hh:mm:ss
             ) {
                 // Input passed all tests, add it to the page
-                var item = createElement('li', label + ': ' + number + ", submited at " + timestamp);
+                let item = createElement('li', label + ': ' + number + ", submited at " + timestamp);
                 item.parent(list);
             }
         }
     }
 }
-

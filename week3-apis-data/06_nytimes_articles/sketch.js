@@ -8,30 +8,30 @@
 // But you should probably get your own
 
 // Input from user
-var input;
+let input;
 
 function setup() {
   noCanvas();
 
   // Grab the input and button from HTML
   input = select('#search');
-  var button = select('#submit');
+  let button = select('#submit');
   // Attach a callback to button press
   button.mousePressed(search);
 }
 
 // Run the API call
 function search() {
-  var term = input.value();
+  let term = input.value();
 
   // URL for querying the times
-  var url = 'https://api.nytimes.com/svc/search/v2/articlesearch.jsonp?'
-          + 'callback=svc_search_v2_articlesearch&api-key=sample-key'
+  let url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?'
+          + 'api-key=99cfea65a5bb30650b3d31eb1713233e:15:73386102'
           + '&q=' + term;
 
   // Query the URL, set a callback
   // 'jsonp' is needed for security
-  loadJSON(url, gotData, 'jsonp');
+  loadJSON(url, gotData);
 }
 
 // Request is completed
@@ -41,16 +41,16 @@ function gotData(data) {
   docs = data.response.docs;
 
   // Iterate through the articles in "docs"
-  for (var i = 0; i < docs.length; i++) {
+  for (let i = 0; i < docs.length; i++) {
 
     // Make each headline a link to the article
-    var headline = createElement('h3', '');
-    var link = createA(docs[i].web_url, docs[i].headline.main);
+    let headline = createElement('h3', '');
+    let link = createA(docs[i].web_url, docs[i].headline.main);
     link.parent(headline);
     headline.parent('results');
 
     // Make a <p> for "lead paragraph"
-    var par = createP(docs[i].lead_paragraph);
+    let par = createP(docs[i].lead_paragraph);
     par.parent('results');
   }
 }
