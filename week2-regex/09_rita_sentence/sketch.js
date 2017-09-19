@@ -1,6 +1,6 @@
-// A2Z F15
+// A2Z F17
 // Daniel Shiffman
-// https://github.com/shiffman/A2Z-F15
+// https://github.com/shiffman/A2Z-F17
 
 // Adapted from: http://p5js.org/examples/examples/Dom_Input_and_Button.php
 

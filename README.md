@@ -12,7 +12,7 @@ This course focuses on programming strategies and techniques behind procedural a
 
 ## Week 1 - Intro
 * [Notes and Examples](http://shiffman.net/a2z/intro/)
-* [Glitch Example](https://glitch.com/edit/#!/a2z-diastic)
+* [Glitch Example](https://glitch.com/edit/#!/a2z-diastic)  
 * Git, Github, Github pages
 * DOM manipulation in p5.js
 * Strings in JS

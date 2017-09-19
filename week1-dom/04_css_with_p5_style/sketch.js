@@ -1,6 +1,6 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 // http://shiffman.net/a2z
 
 // Creating other HTML elements, adding style.

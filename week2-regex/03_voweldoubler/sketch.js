@@ -1,8 +1,6 @@
-// A2Z F15
+// A2Z F17
 // Daniel Shiffman
 // https://github.com/shiffman/
-
-
 
 // Here is where we are working with a regex
 function process(txt) {
