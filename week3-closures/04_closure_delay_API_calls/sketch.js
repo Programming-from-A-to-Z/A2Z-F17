@@ -5,6 +5,11 @@
 // API documentation
 // http://developer.nytimes.com
 
+/* ----------------------------------------------------- */
+/* !!!!!!!! This example is not working due to: !!!!!!!! */
+/* https://github.com/NYTimes/public_api_specs/issues/34 */
+/* ----------------------------------------------------- */
+
 // Count term appearance in times per year
 var start, end, total, w;
 
