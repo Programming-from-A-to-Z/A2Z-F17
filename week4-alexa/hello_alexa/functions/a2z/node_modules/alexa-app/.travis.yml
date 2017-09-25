@@ -1,0 +1,34 @@
+language: node_js
+
+sudo: false
+
+matrix:
+  include:
+    - node_js: node
+      script:
+        - npm run-script danger
+        - npm run-script lint
+        - npm run-script test-with-coverage
+        - npm install dtslint
+        - npm run dtslint
+      after_script:
+        - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+node_js:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm config set spin false
+
+notifications:
+  email: false
