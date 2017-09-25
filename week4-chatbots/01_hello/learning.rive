@@ -1,0 +1,15 @@
+// Set and Get for variables
+
++ my name is *
+- <set name=<star>>It's nice to meet you, <get name>.
+
++ what is my name
+* <get name> == undefined => Tell me your name.
+- Hi <get name>!
+
++ my age is #
+- <set age=<star>> Ok, got it.
+
++ am i older than you
+* <get age> > 10 => You are! I am 10.
+* <get age> <= 10 => Nope! I am 10.
