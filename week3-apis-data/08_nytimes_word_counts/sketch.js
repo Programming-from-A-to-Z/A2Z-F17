@@ -7,6 +7,11 @@
 // Weirdly it seems to work with 'sample-key'
 // But you should probably get your own
 
+/* ----------------------------------------------------- */
+/* !!!!!!!! This example is not working due to: !!!!!!!! */
+/* https://github.com/NYTimes/public_api_specs/issues/34 */
+/* ----------------------------------------------------- */
+
 // Count term appearance in times per year
 var  start, end, total, w;
 

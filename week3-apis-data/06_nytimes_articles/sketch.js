@@ -50,7 +50,7 @@ function gotData(data) {
     headline.parent('results');
 
     // Make a <p> for "lead paragraph"
-    let par = createP(docs[i].lead_paragraph);
+    let par = createP(docs[i].snippet);
     par.parent('results');
   }
 }

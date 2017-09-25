@@ -9,6 +9,8 @@ let baseUrl = 'https://api.clarifai.com/v1/';
 
 let accessToken;
 
+let img = 'https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg';
+
 function setup() {
   noCanvas();
 
@@ -18,6 +20,9 @@ function setup() {
     'client_secret': clientSecret
   }
 
+  // Show the image
+  createImg(img);
+
   // get authorization token and call askClarifai() on success
   httpPost(baseUrl + 'token', data, "json", success_token, error);
 
@@ -26,7 +31,7 @@ function setup() {
 function askClarifai() {
   let data = {
     access_token : accessToken.access_token,
-    url: 'http://shiffman.net/images/dan_shiffman.jpeg'
+    url: img
   }
 
   httpGet(baseUrl + 'tag', data, "json", success_tag, error);
@@ -45,7 +50,7 @@ function success_tag (response) {
   results = response["results"];
   tags = results["0"].result.tag.classes
   for (let i = 0; i < tags.length; i++) {
-    createP(tags[i]);
+    createDiv(tags[i]);
   }
 }
 
