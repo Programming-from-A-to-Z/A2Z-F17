@@ -1,7 +1,0 @@
-{
-  "name": "alexa",
-  "description": "I am an a2z demo.",
-  "memory": 128,
-  "timeout": 5,
-  "role": "arn:aws:iam::645908560842:role/service-role/a2z"
-}
