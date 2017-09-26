@@ -1,20 +1,22 @@
 // Speech Object
-let speech = new p5.SpeechRec();
+let speech;
 
 function setup() {
   noCanvas();
+  speech = new p5.SpeechRec();
   speech.onResult = gotSpeech;
+  speech.continuous = true; // do continuous recognition
+	speech.interimResults = false; // allow partial recognition (faster, less accurate)
   speech.start();
 
-  speech.continuous = true; // do continuous recognition
-	speech.interimResults = true; // allow partial recognition (faster, less accurate)
 
-}
+  let output = select('#speech');
 
-function gotSpeech() {
-  if(speech.resultValue) {
-    let said = speech.resultString;
-    console.log(said);
-    createP(said);
+  function gotSpeech() {
+    if(speech.resultValue) {
+      let said = speech.resultString;
+      console.log(said);
+      output.html(said);
+    }
   }
 }
