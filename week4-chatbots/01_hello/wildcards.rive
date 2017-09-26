@@ -1,0 +1,49 @@
+
+// Wildcard Triggers
+
+// * means match anything
++ why is *
+- I don't know.
+- I wish I knew.
+- No idea.
+
+// You can use what is matched in a reply
++ my name is *
+- Nice to meet you, <star1>!
+
+// Or multiple things
++ * told * *
+- Really, <star1> said "<star3>" to <star2>!?!
+
+// Or replies for anything that is not matched by something else!
++ *
+- I'm not sure how to reply to that.
+- Try asking your question a different way.
+- Let's change the subject.
+
+// Match just a number
++ i am # years old
+- How does it feel to be <star1> years old?
+
+// Match just a-z characters
++ i am _ years old
+- Can you try again but with a number?
+
+// Optionals between []
++ what is your [phone] number
+- 212-123-1234
+
+// Optional anything is a nice way to match a "keyword"
++ [*] javascript [*]
+- Can you teach me to program in JavaScript?
+
+// Match one or the other
++ i love (purple|pink)
+- What about red?
+
+// Better to use an array!
+! array colors = red blue green yellow
+
+// Match anything from the array
++ my favorite color is (@colors)
+- I am wearing a <star1> shirt!

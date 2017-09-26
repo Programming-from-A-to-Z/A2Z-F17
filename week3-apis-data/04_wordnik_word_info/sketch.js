@@ -6,16 +6,16 @@
 // Developer documentation: http://developer.wordnik.com/
 
 // Main API URL
-var wordnik = 'https://api.wordnik.com/v4/word.json/';
+let wordnik = 'https://api.wordnik.com/v4/word.json/';
 // API Key
-var api_key = '/?api_key=48dd829661f515d5abc0d03197a00582e888cc7da2484d5c7'
+let api_key = '/?api_key=48dd829661f515d5abc0d03197a00582e888cc7da2484d5c7'
 
 // Get user input
-var input;
+let input;
 
-var exampleButton;
-var definitionButton;
-var audioButton;
+let exampleButton;
+let definitionButton;
+let audioButton;
 
 function setup() {
   noCanvas();
@@ -35,17 +35,17 @@ function setup() {
 
 
 function listExamples() {
-  var url = wordnik + input.value() + '/examples' + api_key;
+  let url = wordnik + input.value() + '/examples' + api_key;
   loadJSON(url, gotExamples);
 }
 
 function listDefinitions() {
-  var url = wordnik + input.value() + '/definitions' + api_key;
+  let url = wordnik + input.value() + '/definitions' + api_key;
   loadJSON(url, gotDefinitions);
 }
 
 function listAudio() {
-  var url = wordnik + input.value() + '/audio' + api_key;
+  let url = wordnik + input.value() + '/audio' + api_key;
   loadJSON(url, gotAudio);
 }
 
@@ -63,10 +63,10 @@ function gotDefinitions(data) {
 
 function show(list) {
   // Render everything as an "ordered list"
-  var ol = createElement('ol');
-  for (var i = 0; i < list.length; i++) {
+  let ol = createElement('ol');
+  for (let i = 0; i < list.length; i++) {
     // Get example text
-    var li = createElement('li', list[i].text);
+    let li = createElement('li', list[i].text);
     li.parent(ol);
   }
 }
@@ -74,13 +74,13 @@ function show(list) {
 // This is a function to handle when the data has come back
 function gotAudio(data) {
   console.log(data);
-  var ol = createElement('ol');
-  for (var i = 0; i < data.length; i++) {
+  let ol = createElement('ol');
+  for (let i = 0; i < data.length; i++) {
     // Make a link that plays the sound
-    var a = createA('#', 'play');
+    let a = createA('#', 'play');
     // Attach a sound to the link
     setSound(a, data[i].fileUrl);
-    var li = createElement('li', data[i].audioType + ': ');
+    let li = createElement('li', data[i].audioType + ': ');
     a.parent(li);
     li.parent(ol);
   }
@@ -91,7 +91,7 @@ function gotAudio(data) {
 function setSound(a, url) {
   a.mousePressed(playSound);
   function playSound() {
-    var audio = createAudio(url);
+    let audio = createAudio(url);
     audio.play();
   }
 }

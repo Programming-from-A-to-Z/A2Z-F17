@@ -8,23 +8,23 @@ function setup() {
 
   noCanvas();
 
-  var lexicon = new RiLexicon();
+  let lexicon = new RiLexicon();
 
   // Make a text input field
   input = select('#sentence');
   // Make a submit button
-  var button1 = select('#pos');
+  let button1 = select('#pos');
   button1.mousePressed(posSwap);
-  var button2 = select('#rhyme');
+  let button2 = select('#rhyme');
   button2.mousePressed(rhymeSwap);
 
   function posSwap() {
-    var sentence = input.value();
-    var rs = new RiString(sentence);
-    var pos = rs.pos();
+    let sentence = input.value();
+    let rs = new RiString(sentence);
+    let pos = rs.pos();
 
-    var output = '';
-    for (var i = 0; i < pos.length; i++) {
+    let output = '';
+    for (let i = 0; i < pos.length; i++) {
       output += lexicon.randomWord(pos[i]);
       output += ' ';
     }
@@ -32,11 +32,11 @@ function setup() {
   }
 
   function rhymeSwap() {
-    var sentence = input.value();
-    var output = sentence.replace(/\b\w+\b/g, replacer);
+    let sentence = input.value();
+    let output = sentence.replace(/\b\w+\b/g, replacer);
     createP(output).class('text');
     function replacer(match) {
-      var rhymes = lexicon.rhymes(match);
+      let rhymes = lexicon.rhymes(match);
       if (rhymes.length > 0) {
         return random(rhymes);
       } else {

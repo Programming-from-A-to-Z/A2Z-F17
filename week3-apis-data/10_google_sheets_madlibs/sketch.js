@@ -9,23 +9,23 @@ function setup() {
     // This is the URL for my google sheet
     // The sheet is generated from this form: http://goo.gl/forms/0X67GZJTZJ
     // The sheet must set to File --> Published for the Web
-    var url = 'https://docs.google.com/spreadsheets/d/1PCuj_nEiwfbd_5pm9aWLWjbRs2mP6v8C45BbWl6WTn0/pubhtml';
+    let url = 'https://docs.google.com/spreadsheets/d/1PCuj_nEiwfbd_5pm9aWLWjbRs2mP6v8C45BbWl6WTn0/pubhtml';
 
 
     // Make the request
 
-    var button = select('#generate');
+    let button = select('#generate');
     button.mousePressed(madlibber);
 
     function madlibber() {
 
         // I'm forming my own special syntax for how to substitute
         // this will help the regex and replace function
-        var txt = '"$Exclamation$!" she said $Adverb$ as she jumped into her convertible $Noun$ '
+        let txt = '"$Exclamation$!" she said $Adverb$ as she jumped into her convertible $Noun$ '
             + 'and drove off with her $Adjective$ $Noun$.';
 
         // Tabletop expects some settings
-        var settings = {
+        let settings = {
             key: url,            // The url of the published google sheet
             callback: gotData,   // A callback for when the data comes in
             simpleSheet: true    // This makes things simpler for just a single worksheet of rows
@@ -40,16 +40,16 @@ function setup() {
         function gotData(data) {
 
             // Run the replace function with a callback
-            var madlib = txt.replace(/\$(.*?)\$/g, replacer);
+            let madlib = txt.replace(/\$(.*?)\$/g, replacer);
 
 
             // This function replaces words
             function replacer(match, what) {
                 // Pick a random entry
-                var i = floor(random(data.length));
+                let i = floor(random(data.length));
 
                 // Now get the
-                var newtext = data[i][what];
+                let newtext = data[i][what];
 
                 // Check for malicious Javascript code inserted via the spreadsheet
                 // Users are only allowed to input a mix of letters, digits, spaces and standard punctuation
@@ -70,7 +70,7 @@ function setup() {
                 return newtext;
             }
 
-            var par = createP(madlib);
+            let par = createP(madlib);
             par.parent('madlib');
             par.class('text');
         }
@@ -78,4 +78,3 @@ function setup() {
 
     }
 }
-

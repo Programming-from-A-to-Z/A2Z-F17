@@ -1,9 +1,9 @@
 /**
  * Loading Tabular Data
- * by Daniel Shiffman.  
- * 
+ * by Daniel Shiffman.
+ *
  * This example demonstrates how to use loadTable()
- * to retrieve data from a CSV file and make objects 
+ * to retrieve data from a CSV file and make objects
  * from that data.
  *
  * Here is what the CSV looks like:
@@ -16,9 +16,9 @@
  */
 
 // An Array of Bubble objects
-var bubbles;
+let bubbles;
 // A Table object
-var table;
+let table;
 
 function setup() {
   noCanvas();
@@ -29,17 +29,17 @@ function setup() {
 function gotData(table) {
 
   // The size of the array of Bubble objects is determined by the total number of rows in the CSV
-  bubbles = []; 
+  bubbles = [];
 
   // You can access iterate over all the rows in a table
-  for (var i = 0; i < table.getRowCount(); i++) {
-    var row = table.getRow(i);
+  for (let i = 0; i < table.getRowCount(); i++) {
+    let row = table.getRow(i);
     // You can access the fields via their column name (or index)
-    var x = row.get("x");
-    var y = row.get("y");
-    var d = row.get("diameter");
-    var n = row.get("name");
-    var div = createDiv(n);
+    let x = row.get("x");
+    let y = row.get("y");
+    let d = row.get("diameter");
+    let n = row.get("name");
+    let div = createDiv(n);
     div.position(x,y);
     div.style('padding','20px');
     div.style('background-color','#CCC');

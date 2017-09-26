@@ -1,0 +1,33 @@
+! version = 2.0
+
+// BASICS
+// "Atomic" Triggers
+
+// + means trigger
+// triggers should be lower case and have no special characters
++ hello
+// - means reply to trigger
+- Hello!
+
++ what is up
+// multiple replies are picked randomly
+- The sky.
+- Rainbows.
+
++ pick a number
+// You can use {random} for randomness inside a message
+- I pick {random}0|1|2|3|4|5|6{/random}.
+
++ how are you
+// Use weight for certain replies to come up more often
+- Great!{weight=20}
+- Terrible!{weight=10}
+- I have no idea.
+
++ tell me a story
+// \n is a line break and then use ^
+// \s means space
+// \n means line break
+- Once upon a time\s
+^ there lived a mouse.\n
+^ The mouse was named mouse.

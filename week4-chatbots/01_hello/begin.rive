@@ -1,0 +1,29 @@
+// A "begin" file contains configuration settings
+! version = 2.0
+
+// Bot variables
+// These are values that the bot will store
+// They can be changed
+// ! means 'define'
+! var name = bot
+
+// Substitutions
+// These allow you to interpret multiple variations from a user.
+// Should always be lower case
+// Right should not have any special characters
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is

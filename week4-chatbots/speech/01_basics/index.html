@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>01_basics</title>
+
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.speech.js"></script>
+    <script src="sketch.js"></script>
+
+</head>
+
+<body>
+    <h1>p5.Speech Demo</h1>
+
+    <div id="canvas"></div>
+    <p>
+        <input id="say" value="Hello A to Z"></input>
+        <button id="speak">speak</button>
+        <div id="voices">Voice: </div>
+        volume: <input id="volume" type="range" min="0" max="2" step="0.01"></input><br/>
+        rate: <input id="rate" type="range" min="0" max="2" step="0.01"></input><br/>
+        pitch: <input id="pitch" type="range" min="0" max="2" step="0.01"></input><br/>
+    </p>
+</body>
+
+</html>

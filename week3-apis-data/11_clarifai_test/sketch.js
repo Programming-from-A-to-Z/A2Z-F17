@@ -3,20 +3,25 @@
 // https://github.com/shiffman/A2Z-F17
 // http://shiffman.net/a2z
 
-var clientID = '9XnrhLXdHu1Dg0TSrK6dImCv-7VzCyhNRKJcl86E';
-var clientSecret = 'hIqUOlreTW0Zlm0rcPR-v9hkfu1oJo9dmbmR3fDK';
-var baseUrl = 'https://api.clarifai.com/v1/';
+let clientID = '9XnrhLXdHu1Dg0TSrK6dImCv-7VzCyhNRKJcl86E';
+let clientSecret = 'hIqUOlreTW0Zlm0rcPR-v9hkfu1oJo9dmbmR3fDK';
+let baseUrl = 'https://api.clarifai.com/v1/';
 
-var accessToken;
+let accessToken;
+
+let img = 'https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg';
 
 function setup() {
   noCanvas();
 
-  var data = {
+  let data = {
     'grant_type': 'client_credentials',
     'client_id': clientID,
     'client_secret': clientSecret
   }
+
+  // Show the image
+  createImg(img);
 
   // get authorization token and call askClarifai() on success
   httpPost(baseUrl + 'token', data, "json", success_token, error);
@@ -24,9 +29,9 @@ function setup() {
 }
 
 function askClarifai() {
-  var data = {
+  let data = {
     access_token : accessToken.access_token,
-    url: 'http://shiffman.net/images/dan_shiffman.jpeg'
+    url: img
   }
 
   httpGet(baseUrl + 'tag', data, "json", success_tag, error);
@@ -44,8 +49,8 @@ function success_tag (response) {
   console.log(response);
   results = response["results"];
   tags = results["0"].result.tag.classes
-  for (var i = 0; i < tags.length; i++) {
-    createP(tags[i]);
+  for (let i = 0; i < tags.length; i++) {
+    createDiv(tags[i]);
   }
 }
 

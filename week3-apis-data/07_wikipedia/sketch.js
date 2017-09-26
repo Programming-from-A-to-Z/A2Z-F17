@@ -6,24 +6,24 @@
 // https://en.wikipedia.org/w/api.php
 
 // Input from user
-var input;
+let input;
 
 function setup() {
   noCanvas();
 
   // Grab the input and button from HTML
   input = select('#search');
-  var button = select('#submit');
+  let button = select('#submit');
   // Attach a callback to button press
   button.mousePressed(search);
 }
 
 // Run the API call
 function search() {
-  var term = input.value();
+  let term = input.value();
 
   // URL for querying wikipedia
-  var url = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search='
+  let url = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search='
           + '&search=' + term;
 
   // Query the URL, set a callback
@@ -35,18 +35,18 @@ function search() {
 // We got the list of articles
 function gotData(data) {
   // Look at article list
-  var articles = data[1];
+  let articles = data[1];
 
   // Make a clickable link for each one
-  for (var i = 0; i < articles.length; i++) {
+  for (let i = 0; i < articles.length; i++) {
 
     // We could also have this example just link to the articles themselves
-    // var link = 'http://en.wikipedia.org/w/index.php?title=' + articles[i];
-    // var a = createA(link, articles[i]);
+    // let link = 'http://en.wikipedia.org/w/index.php?title=' + articles[i];
+    // let a = createA(link, articles[i]);
 
     // But we are doing something fancier and excuting another query!
-    var li = createElement('li', '');
-    var a = createA('#', articles[i]);
+    let li = createElement('li', '');
+    let a = createA('#', articles[i]);
     a.parent(li);
     li.parent('list');
     // Another callback
@@ -60,7 +60,7 @@ function gotData(data) {
 // to an <a> anchor tag
 function setCallback(a, article) {
   // Form the URL
-  var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json';
+  let url = 'http://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json';
   a.mousePressed(loadData);
 
   function loadData() {
@@ -74,12 +74,12 @@ function setCallback(a, article) {
 
 // Here we got some content for specific article
 function gotContent(data) {
-  var page = data.query.pages;
+  let page = data.query.pages;
   // The content is in the page's ID #, but we don't actually know the ID number
   // But it always comes first, this is a goofy way to get it
-  var id = Object.keys(page)[0];
+  let id = Object.keys(page)[0];
   // Look at the actual content
-  var txt = page[id].revisions[0]['*'];
+  let txt = page[id].revisions[0]['*'];
   // Show in on the HTML page
   createP(txt);
 }

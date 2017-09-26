@@ -2,9 +2,9 @@
 // Daniel Shiffman
 // https://github.com/shiffman/
 
-var wordInput;
+let wordInput;
 
-var results;
+let results;
 
 function setup() {
   noCanvas();
@@ -13,35 +13,35 @@ function setup() {
   wordInput = select('#word');
 
   // A button
-  var analyzeButton = select('#analyze')
+  let analyzeButton = select('#analyze')
   analyzeButton.mousePressed(analyze);
 
-  var clearButton = select('#clear');
+  let clearButton = select('#clear');
   clearButton.mousePressed(clearAll);
-    
+
 }
 
 function analyze() {
-  var p = createP('');
+  let p = createP('');
   p.class('text');
 
 
   // What has the user entered?
   // Make a rita string object
-  var rs = new RiString(wordInput.value());
+  let rs = new RiString(wordInput.value());
 
   // Analyze that string for lots of features
-  var features = rs.features();
-  
+  let features = rs.features();
+
   // Just look at the syllables
-  var syllables = features.syllables;
+  let syllables = features.syllables;
 
   // What's the count of syllables based on the slashes
-  var syllablesCount = syllables.split(/\//).length;
-  
+  let syllablesCount = syllables.split(/\//).length;
+
   // Show
-  var syl = createDiv('Syllables: ' + syllables);
-  var count = createDiv('Count: ' + syllablesCount);
+  let syl = createDiv('Syllables: ' + syllables);
+  let count = createDiv('Count: ' + syllablesCount);
   syl.parent(p);
   count.parent(p);
 
@@ -49,8 +49,8 @@ function analyze() {
 
 // Go through and remove all the divs
 function clearAll() {
-  var par = selectAll('.text');
-  for (var i = 0; i < par.length; i++) {
+  let par = selectAll('.text');
+  for (let i = 0; i < par.length; i++) {
     par[i].remove();
   }
 }

@@ -1,0 +1,20 @@
+! version = 2.0
+
+! sub who's = who is
+
++ knock knock
+- Who's there?
+
+// This matches anything where the "previous" phrase was "who is there"
++ *
+% who is there
+- <star1> who?
+
++ *
+% * who
+- <star1>, hilarious!
+- <star1>, good one!
+- tell me another!
+
++ *
+- Try saying "knock knock".

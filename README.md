@@ -62,13 +62,32 @@ This course focuses on programming strategies and techniques behind procedural a
 * machine learning as service: [clarafai](https://www.clarifai.com/)
 * [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-3-Homework)
 
-## Week 4 -- Intro to Node and Twitter Bots
+## Week 4 -- Bots! Bots! Bots!
+* [ChatBot Slides](https://docs.google.com/presentation/d/1NCeg8WJnH2RFU-VTMpYCffPGHkFRDAoED4LwK6affvI/edit?usp=sharing)
+* [TwitterBot Slides](https://docs.google.com/presentation/d/1rL95AggCb0EG6sBhZ47OWWgI_t7Hllqbyt4AnD2c3-4/edit?usp=sharing)
 * [Notes on Node](http://shiffman.net/a2z/server-node/)
 * [Notes on Twitter Bots](http://shiffman.net/a2z/twitter-bots/)
-* [Notes on deploy to heroku](http://shiffman.net/a2z/bot-heroku/)
-* [Notes on deploy to amazon ec2](http://shiffman.net/a2z/bot-ec2/)
-* How to make a Twitter bot
-* Start working on Twitter Bot project
+   * [Notes on deploy to heroku](http://shiffman.net/a2z/bot-heroku/)
+   * [Notes on deploy to amazon ec2](http://shiffman.net/a2z/bot-ec2/)
+* ChatBots
+   * [RiveScript](https://www.rivescript.com/)
+* Voice Synthesis and Speech Recognition
+   * [p5.Speech from Ability Project](http://ability.nyu.edu/p5.js-speech/)
+* Conversational Interfaces
+   * Alexa
+       * [Hello Alexa Videos](https://www.youtube.com/watch?v=QxgdPI1B7rg)
+       * [Alex-JS Node Package](https://github.com/alexa-js/alexa-app)
+          * [video walkthrough](https://www.youtube.com/watch?v=pzM4jv7k7Rg)
+          * [walkthrough code and notes](https://github.com/dblock/alexa-parrot)
+   * [Google AIY](https://aiyprojects.withgoogle.com/)
+   * [Google Assistant](https://developers.google.com/assistant/sdk/)
+* Reading and References
+  * [12 Weird, Excellent Twitter Bots Chosen by Twitter’s Best Bot-Makers](http://nymag.com/following/2015/11/12-weirdest-funniest-smartest-twitter-bots.html)
+  * [Some Strategies of Bot Poetics](https://harrygiles.org/2016/04/06/some-strategies-of-bot-poetics/)
+  * [How to Make a Bot That Isn't Racist](http://motherboard.vice.com/read/how-to-make-a-not-racist-bot
+  )
+  * [Queer Your Bots: The Bot Builder Roundtable](http://www.autostraddle.com/queer-your-bots-the-bot-builder-roundtable-333806/)
+  * [Twitter: Automation rules and best practices](https://support.twitter.com/articles/76915)
 * [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Bot-Project)
 
 ## Week 5 - Text Analysis Workshop
@@ -80,7 +99,7 @@ This course focuses on programming strategies and techniques behind procedural a
 * Word2Vec
 * Node text analysis packages
 
-## Week 6 - Show Twitter Bots
+## Week 6 - Show Bots
 
 ## Week 7 - Text Generation: Grammars
 * [Notes on Context-Free Grammar](http://shiffman.net/a2z/cfg)

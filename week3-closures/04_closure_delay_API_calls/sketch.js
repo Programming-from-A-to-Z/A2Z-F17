@@ -4,24 +4,29 @@
 
 // API documentation
 // http://developer.nytimes.com
-// Weirdly it seems to work with 'sample-key'
-// But you should probably get your own
+
+/* ----------------------------------------------------- */
+/* !!!!!!!! This example is not working due to: !!!!!!!! */
+/* https://github.com/NYTimes/public_api_specs/issues/34 */
+/* ----------------------------------------------------- */
 
 // Count term appearance in times per year
-var  start, end, total, w;
+var start, end, total, w;
 
 var totalCalls = 0;
 
 // Make a url that searhces for term appeared in a given year
-function makeURL(term,year) {
-  var apikey = '&api-key=sample-key';
-  var api = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&';
-  var query = 'q='+term+'&facet_field=source&begin_date='+year+'0101&end_date='+year+'1231&facet_filter=true';
-  var url = api+query+apikey;
+function makeURL(term, year) {
+  var apikey = 'api-key=99cfea65a5bb30650b3d31eb1713233e:15:73386102';
+  var api = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?';
+  //var api = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&';
+  var query = '&q=' + term + '&facet_field=source&begin_date=' + year + '0101&end_date=' + year + '1231&facet_filter=true';
+  var url = api + apikey + query;
   return url;
 }
 
 function setup() {
+
   // A canvas for drawing!
   var canvas = createCanvas(800, 200);
   background(51);
@@ -32,7 +37,7 @@ function setup() {
   total = end - start;
 
   // How wide is each bar
-  w = width/total;
+  w = width / total;
 
   // What should we search for?
   input = select('#search');
@@ -51,6 +56,7 @@ function searchIt() {
   var term = input.value();
   // Loop through every year
   for (var i = 0; i < total; i++) {
+    console.log(i);
     var year = start + i;
     // Make the API query URL
     var url = makeURL(term, year);
@@ -68,10 +74,12 @@ function goJSON(url, index) {
 
   // Run the query with that specific URL
   function delayLoad() {
-    loadJSON(url, loaded, 'jsonp');
+    console.log(url);
+    loadJSON(url, loaded);
   }
 
   function loaded(data) {
+    console.log(data);
     // Set a default total to 0
     var count = 0;
     // If you get good data, get the real count
@@ -84,13 +92,13 @@ function goJSON(url, index) {
     fill(175);
     stroke(0);
     // Draw a bar for the graph
-    rect(index * w, height - h, w-2, h);
+    rect(index * w, height - h, w - 2, h);
 
     // An API call is complete
     totalCalls++;
 
     // Are they all done?
-    if(totalCalls === total) {
+    if (totalCalls === total) {
       createP('finished querying NY Times.');
     }
   }
