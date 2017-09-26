@@ -8,8 +8,8 @@ describe('A2Z', function() {
 
   beforeEach(function() {
     var app = express();
-    var parrot = require('../a2z');
-    parrot.express({
+    var a2z = require('../a2z');
+    a2z.express({
       expressApp: app,
       router: express.Router(),
       debug: true,
