@@ -1,7 +1,7 @@
 // A2Z F16
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 
 var url = 'http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg';

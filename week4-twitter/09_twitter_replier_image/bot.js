@@ -1,7 +1,7 @@
 // A2Z F16
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // Create an Twitter object to connect to Twitter API
 // npm install twit
