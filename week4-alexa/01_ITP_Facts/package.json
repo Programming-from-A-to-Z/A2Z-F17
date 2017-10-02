@@ -1,0 +1,7 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "alexa-sdk": "^1.0.14"
+  }
+}
