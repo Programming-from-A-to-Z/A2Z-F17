@@ -10,11 +10,6 @@ let Alexa = require('alexa-sdk');
 // replace with your app ID (OPTIONAL).
 // let APP_ID = undefined;
 
-let facts = [
-  'Pizza is delicious.',
-  'Pizza is not good if you are lactose intolerant'
-];
-
 let SKILL_NAME = 'Salad Or Pizza';
 let HELP_MESSAGE = 'You can ask me for salad or pizza. What can I help you with?';
 let HELP_REPROMPT = 'What can I help you with?';
