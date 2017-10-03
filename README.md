@@ -76,6 +76,8 @@ This course focuses on programming strategies and techniques behind procedural a
 * Conversational Interfaces
    * Alexa
        * [Hello Alexa Videos](https://www.youtube.com/watch?v=QxgdPI1B7rg)
+       * [Offical Amazon Node Package](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs)
+          * [Fact Skill Walkthrough](https://github.com/alexa/skill-sample-nodejs-fact/blob/master/step-by-step/1-voice-user-interface.md)
        * [Alex-JS Node Package](https://github.com/alexa-js/alexa-app)
           * [video walkthrough](https://www.youtube.com/watch?v=pzM4jv7k7Rg)
           * [walkthrough code and notes](https://github.com/dblock/alexa-parrot)
