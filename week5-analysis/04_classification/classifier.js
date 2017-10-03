@@ -1,33 +1,34 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
+
+// A function to validate a toke
+function validate(token) {
+  return /\w{4,}/.test(token);
+}
 
 // An object that does classification with us of words
-function Classifier() {
+class Classifier {
 
-  // A function to validate a toke
-  function validate(token) {
-    return /\w{4,}/.test(token);
+  constructor() {
+    // With each word we'll store an object that includes
+    // Category A,B count
+    // Category A,B probability
+    // Probability of A (vs. B): 1.0 means 100% A, 0% B
+    this.dict = {};
+
+    // An array of just the keys for sorting
+    this.keys = [];
+
+    // Total counts and document counts
+    this.tokenCountA = 0;
+    this.tokenCountB = 0;
+    this.docCountA = 0;
+    this.docCountB = 0;
   }
-
-  // With each word we'll store an object that includes
-  // Category A,B count
-  // Category A,B probability
-  // Probability of A (vs. B): 1.0 means 100% A, 0% B
-  this.dict = {};
-
-  // An array of just the keys for sorting
-  this.keys = [];
-
-  // Total counts and document counts
-  this.tokenCountA = 0;
-  this.tokenCountB = 0;
-  this.docCountA = 0;
-  this.docCountB = 0;
-
   // Increment a word for a category
-  this.increment = function(token, category) {
+  increment(token, category) {
 
     // Is this a new word?
     if (this.dict[token] === undefined) {
@@ -51,7 +52,7 @@ function Classifier() {
 
 
   // Get some data to train
-  this.train = function(data, category) {
+  train(data, category) {
     // Split into words
     var tokens = data.split(/\W+/);
 
@@ -74,7 +75,7 @@ function Classifier() {
   }
 
   // Compute the probabilities
-  this.probabilities = function() {
+  probabilities() {
     for (var i = 0; i < this.keys.length; i++) {
       var key = this.keys[i];
       var word = this.dict[key];
@@ -95,7 +96,7 @@ function Classifier() {
 
 
   // Now we have some data we need to guess
-  this.guess = function(data) {
+  guess(data) {
 
     // All the tokens
     var tokens = data.split(/\W+/);
@@ -106,23 +107,23 @@ function Classifier() {
 
 
     for (var i = 0; i < tokens.length; i++) {
-        var token = tokens[i].toLowerCase();
-        if (validate(token)) {
-          // Collect the probability
-          var word;
-          if (this.dict[token] !== undefined && !hash[token]) {
-            word = this.dict[token];
-            words.push(word);
-            hash[token] = true;
-          } else {
-            // For an unknown word
-            // We could just not include this (would be simpler)
-            // Or in the case of spam we might give it 0.4 chance of spam
-            // word = {};
-            // word.word = token;
-            // word.probA = 0.5;
-            // word.probB = 0.5;
-          }
+      var token = tokens[i].toLowerCase();
+      if (validate(token)) {
+        // Collect the probability
+        var word;
+        if (this.dict[token] !== undefined && !hash[token]) {
+          word = this.dict[token];
+          words.push(word);
+          hash[token] = true;
+        } else {
+          // For an unknown word
+          // We could just not include this (would be simpler)
+          // Or in the case of spam we might give it 0.4 chance of spam
+          // word = {};
+          // word.word = token;
+          // word.probA = 0.5;
+          // word.probB = 0.5;
+        }
       }
     }
 

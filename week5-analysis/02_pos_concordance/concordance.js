@@ -1,28 +1,30 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // An object to store all the info related to a concordance
 
-function Concordance() {
-  this.dict = {};
-  this.keys = [];
+class Concordance {
 
+  constructor() {
+    this.dict = {};
+    this.keys = [];
+  }
 
   // Splitting up the text
-  this.split = function(text) {
+  split(text) {
     // Split into array of tokens
     return text.split(/\W+/);
   }
 
   // A function to validate a toke
-  this.validate = function(token) {
+  validate(token) {
     return /\w{2,}/.test(token);
   }
 
   // Process new text
-  this.process = function(data) {
+  process(data) {
     var tokens;
     // Is it already split?
     if (data instanceof Array) {
@@ -43,29 +45,29 @@ function Concordance() {
   }
 
   // An array of keys
-  this.getKeys = function() {
+  getKeys() {
     return this.keys;
   }
 
   // Get the count for a word
-  this.getCount = function(word) {
+  getCount(word) {
     return this.dict[word];
   }
 
   // Increment the count for a word
-  this.increment = function(word) {
+  increment(word) {
     // Is this a new word?
     if (!this.dict[word]) {
       this.dict[word] = 1;
       this.keys.push(word);
-    // Otherwise just increment its count
+      // Otherwise just increment its count
     } else {
       this.dict[word]++;
     }
   }
 
   // Sort array of keys by counts
-  this.sortByCount = function() {
+  sortByCount() {
     // For this function to work for sorting, I have
     // to store a reference to this so the context is not lost!
     var concordance = this;
