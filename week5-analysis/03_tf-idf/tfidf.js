@@ -4,7 +4,7 @@
 // https://github.com/shiffman/A2Z-F17
 
 // Some utility functions
-function split(text) {
+function tokenize(text) {
   // Split into array of tokens
   return text.split(/\W+/);
 }
@@ -23,7 +23,7 @@ class TFIDF {
 
   // Count the words
   termFreq(data) {
-    var tokens = split(data);
+    var tokens = tokenize(data);
     // For every token
     for (var i = 0; i < tokens.length; i++) {
       // Lowercase everything to ignore case
@@ -37,7 +37,7 @@ class TFIDF {
 
   // Get the document frequencies across all documents
   docFreq(data) {
-    var tokens = split(data);
+    var tokens = tokenize(data);
 
     // A temporary dictionary of words in this document
     var tempDict = {};
