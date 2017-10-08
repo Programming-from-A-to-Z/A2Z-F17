@@ -8,28 +8,25 @@ let speech;
 
 function setup() {
   noCanvas();
-  // Create a Speech Recognition object
-  speech = new p5.SpeechRec();
-  // Assign an event for when it's recognized something
-  speech.onResult = gotSpeech;
+  // Create a Speech Recognition object with callback
+  speechRec = new p5.SpeechRec(gotSpeech);
   // "Continuous recognition" (as opposed to one time only)
-  speech.continuous = true;
+  let continuous = true;
   // If you want to try partial recognition (faster, less accurate)
-  // Change this to "true"
-	speech.interimResults = false;
+  let interimResults = false;
   // This must come after setting the properties
-  speech.start();
+  speechRec.start(continuous, interimResults);
 
   // DOM element to display results
   let output = select('#speech');
 
   // Speech recognized event
-  function gotSpeech() {
+  function gotSpeech(speech) {
     // Something is there
-    if (speech.resultValue) {
-      // Get it as a string, you can also get JSON with more info
-      let said = speech.resultString;
-      console.log(said);
+    // Get it as a string, you can also get JSON with more info
+    console.log(speech);
+    if (speech.success) {
+      let said = speech.text;
       // Show user
       output.html(said);
     }

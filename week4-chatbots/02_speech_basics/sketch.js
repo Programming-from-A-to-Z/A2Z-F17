@@ -3,10 +3,24 @@
 // http://shiffman.net/a2z
 // https://github.com/shiffman/A2Z-F17
 
-// Create a speech object
-let voice = new p5.Speech();
 
 function setup() {
+  // Create a speech object
+  let voice = new p5.Speech(voiceReady);
+
+  // When the voice is ready
+  function voiceReady() {
+    // Ask for all the possible voices and put them in a dropdown
+    dropdown = createSelect();
+    dropdown.parent('voices');
+    let voices = voice.voices;
+    for (let i = 0; i < voices.length; i++) {
+      dropdown.option(voices[i].name);
+    }
+    // Speak if you ask for a new voice
+    dropdown.changed(sayIt);
+  }
+
   // A small canvas to show when its "talking" or not
   createCanvas(200, 20).parent('canvas');
   background(0);
@@ -26,28 +40,18 @@ function setup() {
   button.mousePressed(sayIt);
 
   // Events for starting and stopping talking
-  voice.onStart = function() {
+  voice.started(startSpeaking);
+  function startSpeaking() {
     background(0, 255, 0);
   }
-  voice.onEnd = function() {
+
+  voice.ended(endSpeaking);
+  function endSpeaking() {
     background(0);
   }
 
   // This will be for all of the voice options
   let dropdown;
-
-  // When the voice is ready
-  voice.onLoad = function() {
-    // Ask for all the possible voices and put them in a dropdown
-    dropdown = createSelect();
-    dropdown.parent('voices');
-    let voices = voice.voices;
-    for (let i = 0; i < voices.length; i++) {
-      dropdown.option(voices[i].name);
-    }
-    // Speak if you ask for a new voice
-    dropdown.changed(sayIt);
-  }
 
   // Function to say what is in the text input
   function sayIt() {
