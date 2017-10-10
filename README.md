@@ -71,6 +71,8 @@ This course focuses on programming strategies and techniques behind procedural a
    * [Notes on deploy to amazon ec2](http://shiffman.net/a2z/bot-ec2/)
 * ChatBots
    * [RiveScript](https://www.rivescript.com/)
+   * [RiveScript video tutorial](https://www.youtube.com/watch?v=wf8w1BJb9Xc)
+   * [RiveScript + p5.js video tutorial](https://www.youtube.com/watch?v=zGe1m_bLOFk)
 * Voice Synthesis and Speech Recognition
    * [p5.Speech from Ability Project](http://ability.nyu.edu/p5.js-speech/)
 * Conversational Interfaces
@@ -108,7 +110,6 @@ This course focuses on programming strategies and techniques behind procedural a
 * Tracery by Kate Compton
 * Context free grammars
 * [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
-
 
 ## Week 8 - Text Generation: N-Grams, Markov chains, and LSTMs
 * [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
