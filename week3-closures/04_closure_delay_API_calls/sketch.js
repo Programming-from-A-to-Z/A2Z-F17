@@ -5,11 +5,6 @@
 // API documentation
 // http://developer.nytimes.com
 
-/* ----------------------------------------------------- */
-/* !!!!!!!! This example is not working due to: !!!!!!!! */
-/* https://github.com/NYTimes/public_api_specs/issues/34 */
-/* ----------------------------------------------------- */
-
 // Count term appearance in times per year
 var start, end, total, w;
 
@@ -20,7 +15,7 @@ function makeURL(term, year) {
   var apikey = 'api-key=99cfea65a5bb30650b3d31eb1713233e:15:73386102';
   var api = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?';
   //var api = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&';
-  var query = '&q=' + term + '&facet_field=source&begin_date=' + year + '0101&end_date=' + year + '1231&facet_filter=true';
+  var query = '&q=' + term + '&facet_fields=source&begin_date=' + year + '0101&end_date=' + year + '1231&facet=1';
   var url = api + apikey + query;
   return url;
 }
@@ -56,7 +51,6 @@ function searchIt() {
   var term = input.value();
   // Loop through every year
   for (var i = 0; i < total; i++) {
-    console.log(i);
     var year = start + i;
     // Make the API query URL
     var url = makeURL(term, year);
@@ -69,17 +63,15 @@ function searchIt() {
 function goJSON(url, index) {
 
   // The NYTimes will complain if you hit them too quickly with
-  // many requests, so this spaces them out by 100 millis
-  setTimeout(delayLoad, index * 100);
+  // many requests, so this spaces them out by 1 second
+  setTimeout(delayLoad, index * 1000);
 
   // Run the query with that specific URL
   function delayLoad() {
-    console.log(url);
     loadJSON(url, loaded);
   }
 
   function loaded(data) {
-    console.log(data);
     // Set a default total to 0
     var count = 0;
     // If you get good data, get the real count
