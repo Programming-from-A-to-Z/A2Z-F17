@@ -10,28 +10,34 @@
 
 // LSystem Rule object
 
-function Rule(a_, b_) {
-  this.a = a_;
-  this.b = b_;
+class Rule {
 
-  this.getA = function() {
+  constructor(a_, b_) {
+    this.a = a_;
+    this.b = b_;
+  }
+
+  getA() {
     return this.a;
-  };
+  }
 
-  this.getB = function() {
+  getB() {
     return this.b;
-  };
+  }
 }
 
 
 // Construct an LSystem with a startin sentence and a ruleset
-function LSystem(axiom, r) {
-  this.sentence = axiom;  // The sentence (a String)
-  this.ruleset = r;       // The ruleset (an array of Rule objects)
-  this.generation = 0;    // Keeping track of the generation #
+class LSystem {
+
+  constructor(axiom, r) {
+    this.sentence = axiom; // The sentence (a String)
+    this.ruleset = r; // The ruleset (an array of Rule objects)
+    this.generation = 0; // Keeping track of the generation #
+  }
 
   // Generate the next generation
-  this.generate = function() {
+  generate() {
     // An empty StringBuffer that we will fill
     var nextgen = '';
     // For every character in the sentence
@@ -55,14 +61,13 @@ function LSystem(axiom, r) {
     this.sentence = nextgen;
     // Increment generation
     this.generation++;
-  };
+  }
 
-  this.getSentence = function() {
+  getSentence() {
     return this.sentence;
-  };
+  }
 
-  this.getGeneration = function() {
+  getGeneration() {
     return this.generation;
-  };
+  }
 }
-
