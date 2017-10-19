@@ -6,7 +6,8 @@
 
 function setup() {
   // Create a speech object
-  let voice = new p5.Speech(voiceReady);
+  let voice = new p5.Speech();
+  voice.onLoad = voiceReady;
 
   // When the voice is ready
   function voiceReady() {
