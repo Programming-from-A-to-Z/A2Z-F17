@@ -99,17 +99,19 @@ This course focuses on programming strategies and techniques behind procedural a
 * In class, we'll build a simple concordance together as well as demonstrate and discuss TF/IDF, Bayesian analysis, and word2vec.
 * Simple Concordance
 * TF/IDF
-* Bayesian Analysis
-* Word2Vec
+* [Bayesian Classification Library](https://github.com/shiffman/bayes-classifier-js)
 * Node text analysis packages
 
 ## Week 6 - Show Bots
 
-## Week 7 - Text Generation: Grammars
-* [Notes on Context-Free Grammar](http://shiffman.net/a2z/cfg)
-* Tracery by Kate Compton
-* Context free grammars
-* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
+## Week 7 - Text Generation: Word2Vec and Grammars
+* Word2Vec
+    * [Allison Parrish Word2Vec Tutorial](https://gist.github.com/aparrish/2f562e3737544cf29aaf1af30362f469)
+    * [JavaScript Word2Vec Library](https://github.com/shiffman/p5-word2vec)
+* Grammars
+    * [Notes on Context-Free Grammar](http://shiffman.net/a2z/cfg)
+    * [Tracery by Kate Compton](http://tracery.io/)
+* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-7-Homework)
 
 ## Week 8 - Text Generation: N-Grams, Markov chains, and LSTMs
 * [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
