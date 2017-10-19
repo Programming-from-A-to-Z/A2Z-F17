@@ -6,24 +6,24 @@
 // http://developer.nytimes.com
 
 // Count term appearance in times per year
-var start, end, total, w;
+let start, end, total, w;
 
-var totalCalls = 0;
+let totalCalls = 0;
 
 // Make a url that searhces for term appeared in a given year
 function makeURL(term, year) {
-  var apikey = 'api-key=99cfea65a5bb30650b3d31eb1713233e:15:73386102';
-  var api = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?';
-  //var api = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&';
-  var query = '&q=' + term + '&facet_fields=source&begin_date=' + year + '0101&end_date=' + year + '1231&facet=1';
-  var url = api + apikey + query;
+  let apikey = 'api-key=99cfea65a5bb30650b3d31eb1713233e:15:73386102';
+  let api = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?';
+  //let api = 'http://api.nytimes.com/svc/search/v2/articlesearch.jsonp?callback=svc_search_v2_articlesearch&';
+  let query = '&q=' + term + '&facet_fields=source&begin_date=' + year + '0101&end_date=' + year + '1231&facet=1';
+  let url = api + apikey + query;
   return url;
 }
 
 function setup() {
 
   // A canvas for drawing!
-  var canvas = createCanvas(800, 200);
+  let canvas = createCanvas(800, 200);
   background(51);
 
   // How many years to look at?
@@ -36,7 +36,7 @@ function setup() {
 
   // What should we search for?
   input = select('#search');
-  var button = select('#submit');
+  let button = select('#submit');
   // Execute the query
   button.mousePressed(searchIt);
 }
@@ -48,50 +48,41 @@ function searchIt() {
   // Reset total number of API calls to zero
   totalCalls = 0;
 
-  var term = input.value();
+  let term = input.value();
   // Loop through every year
-  for (var i = 0; i < total; i++) {
-    var year = start + i;
+  for (let i = 0; i < total; i++) {
+    let year = start + i;
     // Make the API query URL
-    var url = makeURL(term, year);
+    let url = makeURL(term, year);
     // console.log(url);
-    // Run the query and keep track of the index
-    goJSON(url, i);
+
+    // The NYTimes will complain if you hit them too quickly with
+    // many requests, so this spaces them out by 1 second
+    setTimeout(() => {
+      loadJSON(url, (data) => {
+        // Set a default total to 0
+        let count = 0;
+        // If you get good data, get the real count
+        if (data.response.facets.source.terms[0]) {
+          count = data.response.facets.source.terms[0].count;
+        }
+        // Map the count to a range to fit in canvas
+        // Could do better here
+        let h = map(count, 0, 1000, 0, 50);
+        fill(175);
+        stroke(0);
+        // Draw a bar for the graph
+        rect(i * w, height - h, w - 2, h);
+
+        // An API call is complete
+        totalCalls++;
+
+        // Are they all done?
+        if (totalCalls === total) {
+          createP('finished querying NY Times.');
+        }
+      });
+    }, i * 1000);
   }
-}
 
-function goJSON(url, index) {
-
-  // The NYTimes will complain if you hit them too quickly with
-  // many requests, so this spaces them out by 1 second
-  setTimeout(delayLoad, index * 1000);
-
-  // Run the query with that specific URL
-  function delayLoad() {
-    loadJSON(url, loaded);
-  }
-
-  function loaded(data) {
-    // Set a default total to 0
-    var count = 0;
-    // If you get good data, get the real count
-    if (data.response.facets.source.terms[0]) {
-      count = data.response.facets.source.terms[0].count;
-    }
-    // Map the count to a range to fit in canvas
-    // Could do better here
-    var h = map(count, 0, 1000, 0, 50);
-    fill(175);
-    stroke(0);
-    // Draw a bar for the graph
-    rect(index * w, height - h, w - 2, h);
-
-    // An API call is complete
-    totalCalls++;
-
-    // Are they all done?
-    if (totalCalls === total) {
-      createP('finished querying NY Times.');
-    }
-  }
 }
