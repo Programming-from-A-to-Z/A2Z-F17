@@ -1,17 +1,17 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // An array of lines from a text file
-var lines;
+let lines;
 // The Markov Generator object
-var markov;
+let markov;
 // An output element
-var output;
+let output;
 
 // Slider to weight the data fed
-var slider;
+let slider;
 
 // Preload some seed data
 function preload() {
@@ -23,7 +23,7 @@ function setup() {
 
 
   // Make the button
-  var button = select('#button');
+  let button = select('#button');
   button.mousePressed(generate);
 
   // Make the output element
@@ -48,29 +48,29 @@ function generate() {
   markov = new MarkovGenerator(5, 2000);
 
   // How many times should we repeat input B
-  var repeat = floor(slider.value() / 10);
+  let repeat = floor(slider.value() / 10);
 
   // Repeat A the inverse of B
-  var totalA = 10 - repeat;
-  var totalB = repeat;
+  let totalA = 10 - repeat;
+  let totalB = repeat;
 
 
   // Feed input A totalA times to the generator
-  for (var n = 0; n < totalA; n++) {
-    for (var i = 0; i < linesA.length; i++) {
+  for (let n = 0; n < totalA; n++) {
+    for (let i = 0; i < linesA.length; i++) {
       markov.feed(linesA[i]);
     }
   }
 
   // Feed input B totalB times to the generator
-  for (var n = 0; n < totalB; n++) {
-    for (var i = 0; i < linesB.length; i++) {
+  for (let n = 0; n < totalB; n++) {
+    for (let i = 0; i < linesB.length; i++) {
       markov.feed(linesB[i]);
     }
   }
 
   // Generate some text and show it
-  var generated = markov.generate();
+  let generated = markov.generate();
   output.html(generated);
 
 }

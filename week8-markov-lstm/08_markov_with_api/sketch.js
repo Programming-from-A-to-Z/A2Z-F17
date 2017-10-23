@@ -1,62 +1,62 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // Thanks to Dana for the idea: http://www.blondishmoment.com/2015/10/21/icm7/
 
 // An array of lines from a text file
-var lines;
+let lines;
 
 // The Markov Generator object
-var markovs = [];
+let markovs = [];
 
 // These are the "orders" this example will support
-var current = 3;
-var start = 2;
-var end = 11;
+let current = 3;
+let start = 2;
+let end = 11;
 
 // Counting if the API calls are finished
-var count = 0;
-var total = 0;
+let count = 0;
+let total = 0;
 
 // For "loading animation"
-var angle = 0;
+let angle = 0;
 
 
 function setup() {
 
   // Make a canvas for a loading animation
-  var canvas = createCanvas(50, 50);
+  let canvas = createCanvas(50, 50);
   canvas.parent('loading');
   // Also a div to say loading
-  var div = createDiv("loading");
+  let div = createDiv("loading");
   div.parent('loading');
 
 
   // Let's make a whole bunch of markov generators
   // All with different orders so we can use them whenever!
-  for (var i = start; i < end; i++) {
+  for (let i = start; i < end; i++) {
     markovs[i] = new MarkovGenerator(i, 1000);
   }
 
   // Newest relationship advice posts
-  var url = 'https://www.reddit.com/r/relationship_advice.json';
+  let url = 'https://www.reddit.com/r/relationship_advice.json';
   loadJSON(url, gotPost);
 
   // Once we've got the data, I want to get all the posts
   // To ask for comments on each post
   function gotPost(data) {
-    var posts = data.data.children;
+    let posts = data.data.children;
 
     // This is how many posts there are!
     total = posts.length;
 
     // Make the API calls, these will need to be delayed to not
     // lock up the page and/or overwhelm the API
-    for (var i = 0; i < posts.length; i++) {
-      var id = posts[i].data.id;
-      var newurl = 'https://www.reddit.com/r/relationship_advice/comments/' + id + '.json';
+    for (let i = 0; i < posts.length; i++) {
+      let id = posts[i].data.id;
+      let newurl = 'https://www.reddit.com/r/relationship_advice/comments/' + id + '.json';
 
       // Instead of immediately calling loadJSON,
       // loadJSON(newurl, gotComments);
@@ -78,10 +78,10 @@ function setup() {
 
   // Now we've got comments
   function gotComments(data) {
-    var advice = data[1].data.children;
+    let advice = data[1].data.children;
     // Feed in the text to all of the APIs!
-    for (var i = 0; i < advice.length; i++) {
-      for (var n = start; n < end; n++) {
+    for (let i = 0; i < advice.length; i++) {
+      for (let n = start; n < end; n++) {
         markovs[n].feed(advice[i].data.body);
       }
     }
@@ -91,28 +91,28 @@ function setup() {
     // all the API calls are done!
     if (count === total) {
       // Show the interface
-      var inter = select('#interface');
+      let inter = select('#interface');
       inter.show();
       // Hide the loading animation
-      var loading = select('#loading');
+      let loading = select('#loading');
       noLoop();
       loading.hide();
     }
   }
 
   // Set up a button
-  var button = select('#button');
+  let button = select('#button');
   button.mousePressed(generate);
 
   // This slider changes the "order" of the markov chain
-  var slider = select('#slider');
+  let slider = select('#slider');
   slider.input(changeOrder);
 
   // Regenerate the markov chain with new order value
   function changeOrder() {
     order = slider.value();
     // Update DOM element to show user changed value
-    var span = select('#order');
+    let span = select('#order');
     span.html(order);
   }
 
@@ -122,8 +122,8 @@ function setup() {
 
 function generate() {
   // Display the generated text
-  var output = select('#advice');
-  var text = markovs[current].generate();
+  let output = select('#advice');
+  let text = markovs[current].generate();
   output.html(text);
 }
 

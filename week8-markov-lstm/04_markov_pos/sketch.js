@@ -1,26 +1,26 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // Keep track of all words by pos
-var wordbypos = {};
+let wordbypos = {};
 // Keep track of all words
-var poslist = [];
+let poslist = [];
 
 function setup() {
   noCanvas();
   // Assign the generate() function to the button
-  var generateButton = select('#generate');
+  let generateButton = select('#generate');
   generateButton.mousePressed(generate);
 
-  var clearButton = select('#clear');
+  let clearButton = select('#clear');
   clearButton.mousePressed(clearIt);
 }
 
 function clearIt() {
-  var markovs = selectAll('.markov');
-  for (var i = 0; i < markovs.length; i++) {
+  let markovs = selectAll('.markov');
+  for (let i = 0; i < markovs.length; i++) {
     markovs[i].remove();
   }
 }
@@ -29,26 +29,26 @@ function clearIt() {
 function generate() {
 
   // Get the input text
-  var textinput = select('#text');
+  let textinput = select('#text');
 
   // Create a generator with parameters
-  var markov = new MarkovGeneratorWord(2, 50);
+  let markov = new MarkovGeneratorWord(2, 50);
 
   // Split it up into line breaks
-  var lines = textinput.value().split('\n');
+  let lines = textinput.value().split('\n');
 
   // Feed in the lines
-  for (var i = 0; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {
     // Trim out any extra white space
-    var txt = lines[i].trim();
+    let txt = lines[i].trim();
 
-    var pos = RiTa.getPosTags(txt);
-    var words = RiTa.tokenize(txt);
+    let pos = RiTa.getPosTags(txt);
+    let words = RiTa.tokenize(txt);
     markov.feed(pos);
 
-    for (var i = 0; i < pos.length; i++) {
-      var tag = pos[i];
-      var word = words[i];
+    for (let i = 0; i < pos.length; i++) {
+      let tag = pos[i];
+      let word = words[i];
       if (!wordbypos[tag]) {
         wordbypos[tag] = [];
         poslist.push(tag);
@@ -59,18 +59,18 @@ function generate() {
   }
 
   // Show the resulting output
-  var generatedPos = markov.generate();
+  let generatedPos = markov.generate();
 
-  var posarray = generatedPos.split(/\s+/);
+  let posarray = generatedPos.split(/\s+/);
 
-  var generatedText = '';
-  for (var i = 0; i < posarray.length; i++) {
-    var tag = posarray[i];
-    var options = wordbypos[tag];
+  let generatedText = '';
+  for (let i = 0; i < posarray.length; i++) {
+    let tag = posarray[i];
+    let options = wordbypos[tag];
     generatedText += options.choice() + ' ';
   }
 
-  var par = createP(generatedPos + '<br/><br/>' + generatedText);
+  let par = createP(generatedPos + '<br/><br/>' + generatedText);
   par.class('markov');
   par.parent('results');
 

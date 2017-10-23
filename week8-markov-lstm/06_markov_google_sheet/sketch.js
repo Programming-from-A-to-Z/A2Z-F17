@@ -1,16 +1,16 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // An array of lines from a text file
-var lines;
+let lines;
 
 // The Markov Generator object
-var markov;
+let markov;
 
 // Global variable to save the data from the sheet
-var sheet;
+let sheet;
 
 
 function setup() {
@@ -22,10 +22,10 @@ function setup() {
   // This is the URL for my google sheet
   // The sheet is generated from this form: http://goo.gl/forms/hwSX7MPMCP
   // The sheet must set to File --> Published for the Web
-  var url = 'https://docs.google.com/spreadsheets/d/1z3RN9vPeVvWZSQVkzqI7m0FXqSI6dXAmY8HQi5NXqNo/pubhtml';
+  let url = 'https://docs.google.com/spreadsheets/d/1z3RN9vPeVvWZSQVkzqI7m0FXqSI6dXAmY8HQi5NXqNo/pubhtml';
 
   // Tabletop expects some settings
-  var settings = {
+  let settings = {
     key: url,            // The url of the published google sheet
     callback: gotData,   // A callback for when the data comes in
     simpleSheet: true    // This makes things simpler for just a single worksheet of rows
@@ -42,17 +42,17 @@ function setup() {
     sheet = data;
 
     // Feed it into the markov generator
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       markov.feed(data[i].name);
     }
   }
 
   // Set up a button
-  var button = select('#button');
+  let button = select('#button');
   button.mousePressed(generate);
 
   // This slider changes the "order" of the markov chain
-  var slider = select('#slider');
+  let slider = select('#slider');
   slider.input(changeOrder);
 
   // Regenerate the markov chain with new order value
@@ -60,11 +60,11 @@ function setup() {
   function changeOrder() {
     order = slider.value();
     // Update DOM element to show user changed value
-    var span = select('#order');
+    let span = select('#order');
     span.html(order);
     // Re-seed the markov chain
     markov = new MarkovGenerator(order, 100);
-    for (var i = 0; i < sheet.length; i++) {
+    for (let i = 0; i < sheet.length; i++) {
       markov.feed(sheet[i].name);
     }
   }
@@ -75,7 +75,7 @@ function setup() {
 
 function generate() {
   // Display the generated text
-  var output = select('#name');
-  var text = markov.generate();
+  let output = select('#name');
+  let text = markov.generate();
   output.html(text);
 }

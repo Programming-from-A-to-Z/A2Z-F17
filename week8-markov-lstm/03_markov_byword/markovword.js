@@ -1,7 +1,7 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // This is based on Allison Parrish's great RWET examples
 // https://github.com/aparrish/rwet-examples
@@ -24,20 +24,23 @@ Array.prototype.choice = function() {
   return this[i];
 }
 
-// A MarkovGenerate object
-function MarkovGeneratorWord(n, max) {
-  // Order (or length) of each ngram
-  this.n = n;
-  // What is the maximum amount we will generate?
-  this.max = max;
-  // An object as dictionary
-  // each ngram is the key, a list of possible next elements are the values
-  this.ngrams = {};
-  // A separate array of possible beginnings to generated text
-  this.beginnings = [];
+// A Markov Generator class
+class MarkovGeneratorWord {
+
+  constructor(n, max) {
+    // Order (or length) of each ngram
+    this.n = n;
+    // What is the maximum amount we will generate?
+    this.max = max;
+    // An object as dictionary
+    // each ngram is the key, a list of possible next elements are the values
+    this.ngrams = {};
+    // A separate array of possible beginnings to generated text
+    this.beginnings = [];
+  }
 
   // A function to feed in text to the markov chain
-  this.feed = function(text) {
+  feed(text) {
 
     var tokens = text.tokenize();
 
@@ -50,12 +53,12 @@ function MarkovGeneratorWord(n, max) {
     var beginning = tokens.slice(0, this.n).join(' ');
     this.beginnings.push(beginning);
 
-      // Now let's go through everything and create the dictionary
+    // Now let's go through everything and create the dictionary
     for (var i = 0; i < tokens.length - this.n; i++) {
       // Usings slice to pull out N elements from the array
-      gram = tokens.slice(i, i + this.n).join(' ');
+      let gram = tokens.slice(i, i + this.n).join(' ');
       // What's the next element in the array?
-      next = tokens[i + this.n];
+      let next = tokens[i + this.n];
 
       // Is this a new one?
       if (!this.ngrams[gram]) {
@@ -67,7 +70,7 @@ function MarkovGeneratorWord(n, max) {
   }
 
   // Generate a text from the information ngrams
-  this.generate = function() {
+  generate() {
 
     // Get a random beginning
     var current = this.beginnings.choice();

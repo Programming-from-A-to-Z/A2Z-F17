@@ -1,20 +1,20 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // Venue IDs
 // 108-131
 // 4 8 31 44 48 60 73 81 89 101 107 96
 
-var venues = [4, 8, 31, 44, 48, 60, 73, 81, 89, 101, 107, 96];
+let venues = [4, 8, 31, 44, 48, 60, 73, 81, 89, 101, 107, 96];
 
 // An array of lines from a text file
-var lines;
+let lines;
 
 // Two generators, one for titles one for elevator pitches
-var titleMarkov;
-var elevatorMarkov;
+let titleMarkov;
+let elevatorMarkov;
 
 function setup() {
   noCanvas();
@@ -25,28 +25,28 @@ function setup() {
   elevatorMarkov = new MarkovGenerator(6, 1000);
 
   // Grab data from the APIs
-  for (var i = 108; i < 132; i++) {
-    var url = 'https://itp.nyu.edu/projects/public/projectsJSON.php?venue_id=' + i;
+  for (let i = 108; i < 132; i++) {
+    let url = 'https://itp.nyu.edu/projects/public/projectsJSON.php?venue_id=' + i;
     loadJSON(url, process)
   }
 
-  for (var i = 0; i < venues.length; i++) {
-    var url = 'https://itp.nyu.edu/projects/public/projectsJSON.php?venue_id=' + venues[i];
+  for (let i = 0; i < venues.length; i++) {
+    let url = 'https://itp.nyu.edu/projects/public/projectsJSON.php?venue_id=' + venues[i];
     loadJSON(url, process)
   }
 
   // Set up a button
-  var button = select('#button');
+  let button = select('#button');
   button.mousePressed(generate);
 }
 
 function process(data) {
   //console.log(data);
-  for (var i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     // Feed in project names
     titleMarkov.feed(data[i].project_name);
 
-    var elevator = data[i].elevator_pitch;
+    let elevator = data[i].elevator_pitch;
     // Not all the data has elevator pitches
     if (elevator) {
       // Doing some cleanup to get rid of nonsense text
@@ -65,10 +65,10 @@ function process(data) {
 
 function generate() {
   // Generate a title
-  var title = select('#title');
+  let title = select('#title');
   title.html(titleMarkov.generate());
 
   // And a decription
-  var description = select('#description');
+  let description = select('#description');
   description.html(elevatorMarkov.generate());
 }
