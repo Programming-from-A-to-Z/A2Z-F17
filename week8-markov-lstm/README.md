@@ -11,6 +11,7 @@
 ### Creative Projects
 * [Writing with the Machine](https://www.robinsloan.com/notes/writing-with-the-machine/)
 * [Magenta: Make Music and Art Using Machine Learning](https://magenta.tensorflow.org/)
+* [Sketch-RNN](https://magenta.tensorflow.org/sketch-rnn-demo)
 * [Handwriting Generation with RNN and p5.js](http://blog.otoro.net/2017/01/01/recurrent-neural-network-artist/)
 * [Experiments in handwriting](http://distill.pub/2016/handwriting/)
 * [RNN for generating Baroque Music](https://www.youtube.com/watch?v=SacogDL_4JU)
