@@ -1,5 +1,8 @@
 # Additional Notes and Resources
 
+## Markov 
+* http://shiffman.net/a2z/markov
+
 ## LSTM
 
 ### Articles
