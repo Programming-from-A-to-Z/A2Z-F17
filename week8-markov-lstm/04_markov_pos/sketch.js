@@ -14,7 +14,7 @@ function setup() {
   let generateButton = select('#generate');
   generateButton.mousePressed(generate);
 
-  let clearButton = select('#clear');
+  let clearButton = select('#clearButton');
   clearButton.mousePressed(clearIt);
 }
 
@@ -29,7 +29,7 @@ function clearIt() {
 function generate() {
 
   // Get the input text
-  let textinput = select('#text');
+  let textinput = select('#text_input');
 
   // Create a generator with parameters
   let markov = new MarkovGeneratorWord(2, 50);

@@ -25,7 +25,6 @@
 * many to one (sentiment analysis)
 * many to many (text, music generation, language translation)
 
-
 ### Python
 * [Environment Setup](https://github.com/shiffman/A2Z-F17/wiki/Python-Environment-for-LSTM-example)
 * `open()` and `read()` for reading in a text file: [python docs](https://docs.python.org/2/tutorial/inputoutput.html)

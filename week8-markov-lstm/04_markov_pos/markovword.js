@@ -40,9 +40,7 @@ class MarkovGeneratorWord {
   }
 
   // A function to feed in text to the markov chain
-  feed(text) {
-
-    let tokens = text.tokenize();
+  feed(tokens) {
 
     // Discard this line if it's too short
     if (tokens.length < this.n) {
@@ -56,9 +54,9 @@ class MarkovGeneratorWord {
     // Now let's go through everything and create the dictionary
     for (let i = 0; i < tokens.length - this.n; i++) {
       // Usings slice to pull out N elements from the array
-      gram = tokens.slice(i, i + this.n).join(' ');
+      let gram = tokens.slice(i, i + this.n).join(' ');
       // What's the next element in the array?
-      next = tokens[i + this.n];
+      let next = tokens[i + this.n];
 
       // Is this a new one?
       if (!this.ngrams[gram]) {
