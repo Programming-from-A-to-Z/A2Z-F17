@@ -122,7 +122,7 @@ This course focuses on programming strategies and techniques behind procedural a
   * source text and output design
   * char vs. word n-grams
   * client-side vs. server-side generation
-* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-7-Homework)
+* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
 
 
 ## Week 9 - Building your own API in Node
