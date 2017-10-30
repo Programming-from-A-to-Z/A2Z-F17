@@ -5,6 +5,10 @@
 
 ## LSTM
 
+### p5-deeplearn-js
+* [p5-deeplearn-js LSTM example 1](https://github.com/ITPNYU/p5-deeplearn-js/tree/master/examples/plainjs/lstm_1), [p5-deeplearn-js LSTM example 2](https://github.com/ITPNYU/p5-deeplearn-js/tree/master/examples/plainjs/lstm_1)
+* [Notes on how to train your own LSTM for p5-deeplearn-js](https://github.com/ITPNYU/p5-deeplearn-js/blob/master/training/lstm/README.md)
+
 ### Articles
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) by Andrej Karpathy
 * [Rohan & Lenny #3: Recurrent Neural Networks & LSTMs](https://ayearofai.com/rohan-lenny-3-recurrent-neural-networks-10300100899b)
