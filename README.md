@@ -126,6 +126,8 @@ This course focuses on programming strategies and techniques behind procedural a
 
 
 ## Week 9 - Building your own API in Node
+* [All examples](https://github.com/shiffman/A2Z-F17/tree/master/week9-node-api)
+* [Notes on Node](http://shiffman.net/a2z/server-node/)
 * [Notes on API in Node](http://shiffman.net/a2z/node-api/)
 * [Notes on Firebase](http://shiffman.net/a2z/firebase)
 * Express
