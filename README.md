@@ -115,14 +115,14 @@ This course focuses on programming strategies and techniques behind procedural a
 
 ## Week 8 - Text Generation: N-Grams, Markov chains, and LSTMs
 * [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
-* [Notes on Machine Learning - RNN/LSTM](https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/blob/master/week6-rnn-tensorflow/README.md)
+* [Notes on RNN/LSTM](https://github.com/shiffman/A2Z-F17/tree/master/week8-markov-lstm/README.md)
 * What is an N-Gram?
 * What is Markov Chain?
   * order
   * source text and output design
   * char vs. word n-grams
   * client-side vs. server-side generation
-* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-7-Homework)
+* [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
 
 
 ## Week 9 - Building your own API in Node

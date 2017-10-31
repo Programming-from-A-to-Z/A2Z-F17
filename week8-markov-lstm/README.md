@@ -1,6 +1,13 @@
 # Additional Notes and Resources
 
+## Markov 
+* http://shiffman.net/a2z/markov
+
 ## LSTM
+
+### p5-deeplearn-js
+* [p5-deeplearn-js LSTM example 1](https://github.com/ITPNYU/p5-deeplearn-js/tree/master/examples/plainjs/lstm_1), [p5-deeplearn-js LSTM example 2](https://github.com/ITPNYU/p5-deeplearn-js/tree/master/examples/plainjs/lstm_2)
+* [Notes on how to train your own LSTM for p5-deeplearn-js](https://github.com/ITPNYU/p5-deeplearn-js/blob/master/training/lstm/README.md)
 
 ### Articles
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) by Andrej Karpathy
@@ -11,6 +18,7 @@
 ### Creative Projects
 * [Writing with the Machine](https://www.robinsloan.com/notes/writing-with-the-machine/)
 * [Magenta: Make Music and Art Using Machine Learning](https://magenta.tensorflow.org/)
+* [Sketch-RNN](https://magenta.tensorflow.org/sketch-rnn-demo)
 * [Handwriting Generation with RNN and p5.js](http://blog.otoro.net/2017/01/01/recurrent-neural-network-artist/)
 * [Experiments in handwriting](http://distill.pub/2016/handwriting/)
 * [RNN for generating Baroque Music](https://www.youtube.com/watch?v=SacogDL_4JU)
