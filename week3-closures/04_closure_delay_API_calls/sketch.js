@@ -99,7 +99,7 @@ function delay(wait) {
   );
 }
 
-
+// TODO: handle errors
 function loadJSONPromise(url) {
   return new Promise(resolve, reject) {
     loadJSON(url, (data) => {
