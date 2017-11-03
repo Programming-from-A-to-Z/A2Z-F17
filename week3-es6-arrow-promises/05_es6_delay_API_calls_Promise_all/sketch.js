@@ -50,6 +50,11 @@ function searchIt() {
 
   let term = input.value();
   // Loop through every year
+
+
+  let promises = [];
+
+
   for (let i = 0; i < total; i++) {
     let year = start + i;
     // Make the API query URL
@@ -58,8 +63,9 @@ function searchIt() {
 
     // The NYTimes will complain if you hit them too quickly with
     // many requests, so this spaces them out by 1 second
-    setTimeout(() => {
-      loadJSON(url, (data) => {
+    let promise = delay(i * 1000)
+      .then(() => loadJSONPromise(url))
+      .then((data) => {
         // Set a default total to 0
         let count = 0;
         // If you get good data, get the real count
@@ -73,16 +79,32 @@ function searchIt() {
         stroke(0);
         // Draw a bar for the graph
         rect(i * w, height - h, w - 2, h);
-
-        // An API call is complete
-        totalCalls++;
-
-        // Are they all done?
-        if (totalCalls === total) {
-          createP('finished querying NY Times.');
-        }
+      })
+      .catch(() => {
+        console.log('something went wrong');
       });
-    }, i * 1000);
+    promises.push(promise);
   }
 
+  let allDone = Promise.all(promises);
+  
+  allDone.then(() => {
+    console.log('All finished');
+  })
+  .catch(() => {
+    console.log('error!')
+  });
+}
+
+function delay(wait) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), wait);
+  });
+}
+
+// TODO: handle errors
+function loadJSONPromise(url) {
+  return new Promise((resolve, reject) => {
+    loadJSON(url, data => resolve(data));
+  });
 }
