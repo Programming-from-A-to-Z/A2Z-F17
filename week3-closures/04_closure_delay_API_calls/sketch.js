@@ -58,9 +58,8 @@ function searchIt() {
 
     // The NYTimes will complain if you hit them too quickly with
     // many requests, so this spaces them out by 1 second
-    delay(i * 1000)
-      .then(() => loadJSONPromise(url))
-      .then((data) => {
+    setTimeout(() => {
+      loadJSON(url, (data) => {
         // Set a default total to 0
         let count = 0;
         // If you get good data, get the real count
@@ -82,28 +81,8 @@ function searchIt() {
         if (totalCalls === total) {
           createP('finished querying NY Times.');
         }
-      })
-      .catch(() => {
-        console.log('something went wrong');
       });
+    }, i * 1000);
   }
-}
 
-function delay(wait) {
-  return new Promise(
-    function(resolve, reject) {
-      setTimeout(function() {
-        resolve();
-      }, wait);
-    }
-  );
-}
-
-// TODO: handle errors
-function loadJSONPromise(url) {
-  return new Promise(resolve, reject) {
-    loadJSON(url, (data) => {
-      resolve(data);
-    });
-  }
 }
