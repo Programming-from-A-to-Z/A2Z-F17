@@ -90,20 +90,14 @@ function searchIt() {
 }
 
 function delay(wait) {
-  return new Promise(
-    function(resolve, reject) {
-      setTimeout(function() {
-        resolve();
-      }, wait);
-    }
-  );
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), wait);
+  });
 }
 
 // TODO: handle errors
 function loadJSONPromise(url) {
-  return new Promise(resolve, reject) {
-    loadJSON(url, (data) => {
-      resolve(data);
-    });
-  }
+  return new Promise((resolve, reject) => {
+    loadJSON(url, data => resolve(data));
+  });
 }
