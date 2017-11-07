@@ -1,7 +1,7 @@
-// A2Z F16
+// A2Z F17
 // Daniel Shiffman
 // http://shiffman.net/a2z
-// https://github.com/shiffman/A2Z-F16
+// https://github.com/shiffman/A2Z-F17
 
 // http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
 // https://www.npmjs.com/package/sentiment
