@@ -1,0 +1,25 @@
+{
+  "name": "a2z-example",
+  "version": "1.0.0",
+  "description": "A minimal Electron application thanks to Shawn Van Every!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "example",
+    "a2z",
+    "tutorial",
+    "demo"
+  ],
+  "author": "A2Z",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "node-wifi-scanner": "^1.0.0"
+  }
+}
