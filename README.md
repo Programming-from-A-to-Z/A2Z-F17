@@ -6,26 +6,26 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **TABLE OF CONTENTS**
 
-<br />[1 - Intro](#1-intro)
-<br />[2 - Regular Expressions](#2-regular-expressions)
-<br />[3 - Data/API Workshop](#3-dataapi-workshop)
-<br />[4 - Bots! Bots! Bots!](#4-bots-bots-bots)
-<br />[5 - Text Analysis Workshop](#5-text-analysis-workshop)
-<br />[6 - Show Bots](#6-show-bots)
-<br />[7 - Text Generation: Word2Vec and Grammars](#7-text-generation-word2vec-and-grammars)
-<br />[8 - Text Generation: N-Grams, Markov chains, and LSTMs](#8-text-generation-n-grams-markov-chains-and-lstms)
-<br />[9 - Building your own API in Node](#9-building-your-own-api-in-node)
-<br />[10 - Chrome Extensions](#10-chrome-extensions)
-<br />[11 - Final Project Proposals part 1](#11-final-project-proposals-part-1)
-<br />[12 - Final Project Proposals part 2](#12-final-project-proposals-part-2)
-<br />[13 - User Testing](#13-user-testing)
-<br />[14 - Final Presentations](#14-final-presentations)
+<br />[Intro](#1-intro)
+<br />[Regular Expressions](#2-regular-expressions)
+<br />[Data/API Workshop](#3-dataapi-workshop)
+<br />[Bots! Bots! Bots!](#4-bots-bots-bots)
+<br />[Text Analysis Workshop](#5-text-analysis-workshop)
+<br />[Show Bots](#6-show-bots)
+<br />[Text Generation: Word2Vec and Grammars](#7-text-generation-word2vec-and-grammars)
+<br />[Text Generation: N-Grams, Markov chains, and LSTMs](#8-text-generation-n-grams-markov-chains-and-lstms)
+<br />[Building your own API in Node](#9-building-your-own-api-in-node)
+<br />[Chrome Extensions](#10-chrome-extensions)
+<br />[Final Project Proposals part 1](#11-final-project-proposals-part-1)
+<br />[Final Project Proposals part 2](#12-final-project-proposals-part-2)
+<br />[User Testing](#13-user-testing)
+<br />[Final Presentations](#14-final-presentations)
 <br />[References and Inspiration](#references-and-inspiration)
 <br />[Tools](#tools)
 <br />[JS reference books](#js-reference-books)
 <br />[Learning / Intro](#learning-intro)
 
-## 1 - Intro
+## Intro
 - [Notes and Examples](http://shiffman.net/a2z/intro/)
 - [Glitch Example](https://glitch.com/edit/#!/a2z-diastic)
 - Git, Github, Github pages
@@ -42,7 +42,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 2 - Regular Expressions
+## Regular Expressions
 - [Notes and Examples](http://shiffman.net/a2z/regex/)
 - Also
   - multiple DOMs + multiple event
@@ -66,7 +66,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 3 - Data/API Workshop
+## Data/API Workshop
 - [Notes and Examples](http://shiffman.net/a2z/data-apis/)
 - JSON basics
   - [Corpora maintained by tinysubversions](https://github.com/dariusk/corpora)
@@ -83,7 +83,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 4 - Bots! Bots! Bots!
+## Bots! Bots! Bots!
 - [ChatBot Slides](https://docs.google.com/presentation/d/1NCeg8WJnH2RFU-VTMpYCffPGHkFRDAoED4LwK6affvI/edit?usp=sharing)
 - [TwitterBot Slides](https://docs.google.com/presentation/d/1rL95AggCb0EG6sBhZ47OWWgI_t7Hllqbyt4AnD2c3-4/edit?usp=sharing)
 - [Notes on Node](http://shiffman.net/a2z/server-node/)
@@ -116,7 +116,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 5 - Text Analysis Workshop
+## Text Analysis Workshop
 - [Notes on text analysis](http://shiffman.net/a2z/text-analysis/)
 - In class, we'll build a simple concordance together as well as demonstrate and discuss TF/IDF, Bayesian analysis, and word2vec.
 - Simple Concordance
@@ -126,11 +126,11 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 6 - Show Bots
+## Show Bots
 
 **__Field Notes__**
 
-## 7 - Text Generation: Word2Vec and Grammars
+## Text Generation: Word2Vec and Grammars
 - Word2Vec
   - [Allison Parrish Word2Vec Tutorial](https://gist.github.com/aparrish/2f562e3737544cf29aaf1af30362f469)
   - [JavaScript Word2Vec Library](https://github.com/shiffman/p5-word2vec)
@@ -141,7 +141,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 8 - Text Generation: N-Grams, Markov chains, and LSTMs
+## Text Generation: N-Grams, Markov chains, and LSTMs
 - [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
 - [Notes on RNN/LSTM](https://github.com/shiffman/A2Z-F17/tree/master/week8-markov-lstm/README.md)
 - What is an N-Gram?
@@ -154,7 +154,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 9 - Building your own API in Node
+## Building your own API in Node
 - [All examples](https://github.com/shiffman/A2Z-F17/tree/master/week9-node-api)
 - [Notes on Node](http://shiffman.net/a2z/server-node/)
 - [Notes on API in Node](http://shiffman.net/a2z/node-api/)
@@ -177,27 +177,27 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 **__Field Notes__**
 
-## 10 - Chrome Extensions
+## Chrome Extensions
 - [Notes on chrome extensions](http://shiffman.net/a2z/chrome-ext/)
 
 **__Field Notes__**
 
-## 11 - Final Project Proposals part 1
+## Final Project Proposals part 1
 - [Proposal links and schedule](https://github.com/shiffman/A2Z-F17/wiki/Final-Project-Proposals)
 
 **__Field Notes__**
 
-## 12 - Final Project Proposals part 2
+## Final Project Proposals part 2
 - [Proposal links and schedule](https://github.com/shiffman/A2Z-F17/wiki/Final-Project-Proposals)
 
 **__Field Notes__**
 
-## 13 - User Testing
+## User Testing
 - [User Testing](https://github.com/shiffman/A2Z-F17/wiki/User-Testing)
 
 **__Field Notes__**
 
-## 14 - Final Presentations
+## Final Presentations
 
 **__Field Notes__**
 
