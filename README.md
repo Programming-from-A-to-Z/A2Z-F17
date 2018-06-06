@@ -4,27 +4,6 @@ PROGRAMING FROM A TO Z
 **Doing a Learn with Daniel Shiffman**
 _This course focuses on programming strategies and techniques behind procedural analysis and generation of text-based data. We'll explore topics ranging from evaluating text according to its statistical properties to the automated production of text with probabilistic methods to text visualization. Student's will learn server-side and client-side JavaScript programming and develop projects that can be shared and interacted with online._
 
-**TABLE OF CONTENTS**
-
-<br />[Intro](#1-intro)
-<br />[Regular Expressions](#2-regular-expressions)
-<br />[Data/API Workshop](#3-dataapi-workshop)
-<br />[Bots! Bots! Bots!](#4-bots-bots-bots)
-<br />[Text Analysis Workshop](#5-text-analysis-workshop)
-<br />[Show Bots](#6-show-bots)
-<br />[Text Generation: Word2Vec and Grammars](#7-text-generation-word2vec-and-grammars)
-<br />[Text Generation: N-Grams, Markov chains, and LSTMs](#8-text-generation-n-grams-markov-chains-and-lstms)
-<br />[Building your own API in Node](#9-building-your-own-api-in-node)
-<br />[Chrome Extensions](#10-chrome-extensions)
-<br />[Final Project Proposals part 1](#11-final-project-proposals-part-1)
-<br />[Final Project Proposals part 2](#12-final-project-proposals-part-2)
-<br />[User Testing](#13-user-testing)
-<br />[Final Presentations](#14-final-presentations)
-<br />[References and Inspiration](#references-and-inspiration)
-<br />[Tools](#tools)
-<br />[JS reference books](#js-reference-books)
-<br />[Learning / Intro](#learning-intro)
-
 ## Intro
 - [Notes and Examples](http://shiffman.net/a2z/intro/)
 - [Glitch Example](https://glitch.com/edit/#!/a2z-diastic)
@@ -179,21 +158,6 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 ## Chrome Extensions
 - [Notes on chrome extensions](http://shiffman.net/a2z/chrome-ext/)
-
-**__Field Notes__**
-
-## Final Project Proposals part 1
-- [Proposal links and schedule](https://github.com/shiffman/A2Z-F17/wiki/Final-Project-Proposals)
-
-**__Field Notes__**
-
-## Final Project Proposals part 2
-- [Proposal links and schedule](https://github.com/shiffman/A2Z-F17/wiki/Final-Project-Proposals)
-
-**__Field Notes__**
-
-## User Testing
-- [User Testing](https://github.com/shiffman/A2Z-F17/wiki/User-Testing)
 
 **__Field Notes__**
 
