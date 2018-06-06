@@ -5,28 +5,26 @@ PROGRAMING FROM A TO Z
 _This course focuses on programming strategies and techniques behind procedural analysis and generation of text-based data. We'll explore topics ranging from evaluating text according to its statistical properties to the automated production of text with probabilistic methods to text visualization. Student's will learn server-side and client-side JavaScript programming and develop projects that can be shared and interacted with online._
 
 **TABLE OF CONTENTS**
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-	- [1 - Intro](#1-intro)
-	- [2 - Regular Expressions](#2-regular-expressions)
-	- [3 - Data/API Workshop](#3-dataapi-workshop)
-	- [4 - Bots! Bots! Bots!](#4-bots-bots-bots)
-	- [5 - Text Analysis Workshop](#5-text-analysis-workshop)
-	- [6 - Show Bots](#6-show-bots)
-	- [7 - Text Generation: Word2Vec and Grammars](#7-text-generation-word2vec-and-grammars)
-	- [8 - Text Generation: N-Grams, Markov chains, and LSTMs](#8-text-generation-n-grams-markov-chains-and-lstms)
-	- [9 - Building your own API in Node](#9-building-your-own-api-in-node)
-	- [10 - Chrome Extensions](#10-chrome-extensions)
-	- [11 - Final Project Proposals part 1](#11-final-project-proposals-part-1)
-	- [12 - Final Project Proposals part 2](#12-final-project-proposals-part-2)
-	- [13 - User Testing](#13-user-testing)
-	- [14 - Final Presentations](#14-final-presentations)
-	- [References and Inspiration](#references-and-inspiration)
-	- [Tools](#tools)
-	- [JS reference books](#js-reference-books)
-	- [Learning / Intro](#learning-intro)
+- [1 - Intro](#1-intro)
+- [2 - Regular Expressions](#2-regular-expressions)
+- [3 - Data/API Workshop](#3-dataapi-workshop)
+- [4 - Bots! Bots! Bots!](#4-bots-bots-bots)
+- [5 - Text Analysis Workshop](#5-text-analysis-workshop)
+- [6 - Show Bots](#6-show-bots)
+- [7 - Text Generation: Word2Vec and Grammars](#7-text-generation-word2vec-and-grammars)
+- [8 - Text Generation: N-Grams, Markov chains, and LSTMs](#8-text-generation-n-grams-markov-chains-and-lstms)
+- [9 - Building your own API in Node](#9-building-your-own-api-in-node)
+- [10 - Chrome Extensions](#10-chrome-extensions)
+- [11 - Final Project Proposals part 1](#11-final-project-proposals-part-1)
+- [12 - Final Project Proposals part 2](#12-final-project-proposals-part-2)
+- [13 - User Testing](#13-user-testing)
+- [14 - Final Presentations](#14-final-presentations)
+- [References and Inspiration](#references-and-inspiration)
+- [Tools](#tools)
+- [JS reference books](#js-reference-books)
+- [Learning / Intro](#learning-intro)
 
-<!-- /TOC -->
 
 ## 1 - Intro
 - [Notes and Examples](http://shiffman.net/a2z/intro/)
