@@ -2,7 +2,28 @@ PROGRAMING FROM A TO Z
 ======================
 
 **Doing a Learn with Daniel Shiffman**
+
 _This course focuses on programming strategies and techniques behind procedural analysis and generation of text-based data. We'll explore topics ranging from evaluating text according to its statistical properties to the automated production of text with probabilistic methods to text visualization. Student's will learn server-side and client-side JavaScript programming and develop projects that can be shared and interacted with online._
+
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+	- [Intro](#intro)
+	- [Regular Expressions](#regular-expressions)
+	- [Data/API Workshop](#dataapi-workshop)
+	- [Bots! Bots! Bots!](#bots-bots-bots)
+	- [Text Analysis Workshop](#text-analysis-workshop)
+	- [Show Bots](#show-bots)
+	- [Text Generation: Word2Vec and Grammars](#text-generation-word2vec-and-grammars)
+	- [Text Generation: N-Grams, Markov chains, and LSTMs](#text-generation-n-grams-markov-chains-and-lstms)
+	- [Building your own API in Node](#building-your-own-api-in-node)
+	- [Chrome Extensions](#chrome-extensions)
+	- [Final Presentations](#final-presentations)
+	- [References and Inspiration](#references-and-inspiration)
+	- [Tools](#tools)
+	- [JS reference books](#js-reference-books)
+	- [Learning / Intro](#learning-intro)
+
+<!-- /TOC -->
 
 ## Intro
 - [Notes and Examples](http://shiffman.net/a2z/intro/)
