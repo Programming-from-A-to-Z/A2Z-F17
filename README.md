@@ -9,15 +9,15 @@ _This course focuses on programming strategies and techniques behind procedural 
 
 - [Intro](#intro)
 - [Regular Expressions](#regular-expressions)
+- [Closures](#closures)
 - [Data/API Workshop](#dataapi-workshop)
 - [Bots! Bots! Bots!](#bots-bots-bots)
 - [Text Analysis Workshop](#text-analysis-workshop)
-- [Show Bots](#show-bots)
 - [Text Generation: Word2Vec and Grammars](#text-generation-word2vec-and-grammars)
 - [Text Generation: N-Grams, Markov chains, and LSTMs](#text-generation-n-grams-markov-chains-and-lstms)
 - [Building your own API in Node](#building-your-own-api-in-node)
 - [Chrome Extensions](#chrome-extensions)
-- [Final Presentations](#final-presentations)
+- [Final Projects](#final-projects)
 - [References and Inspiration](#references-and-inspiration)
 - [Tools](#tools)
 - [JS reference books](#js-reference-books)
@@ -39,7 +39,7 @@ _This course focuses on programming strategies and techniques behind procedural 
   - [Codepen](https://www.youtube.com/watch?v=5gfUgNpS6kY)
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-1-Homework)
 
-**__Field Notes__**
+__Notes: Intro - P5.js, JavaScript and Strings__
 
 ## Regular Expressions
 - [Notes and Examples](http://shiffman.net/a2z/regex/)
@@ -63,7 +63,12 @@ _This course focuses on programming strategies and techniques behind procedural 
   - [randexp.js](http://fent.github.io/randexp.js/)
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-2-Homework)
 
-**__Field Notes__**
+__Notes: Regular Expressions__
+
+## Closures
+- [Notes and Examples](http://shiffman.net/a2z/closures)
+
+__Notes: Closures__
 
 ## Data/API Workshop
 - [Notes and Examples](http://shiffman.net/a2z/data-apis/)
@@ -80,7 +85,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 - machine learning as service: [clarafai](https://www.clarifai.com/)
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-3-Homework)
 
-**__Field Notes__**
+__Notes: Libraries Data and APIs__
 
 ## Bots! Bots! Bots!
 - [ChatBot Slides](https://docs.google.com/presentation/d/1NCeg8WJnH2RFU-VTMpYCffPGHkFRDAoED4LwK6affvI/edit?usp=sharing)
@@ -113,7 +118,7 @@ _This course focuses on programming strategies and techniques behind procedural 
   - [Twitter: Automation rules and best practices](https://support.twitter.com/articles/76915)
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Bot-Project)
 
-**__Field Notes__**
+__Notes: Server-Side, Twitter API and Bots with Node, Deploy Bots with EC2 and Heroku__
 
 ## Text Analysis Workshop
 - [Notes on text analysis](http://shiffman.net/a2z/text-analysis/)
@@ -123,11 +128,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 - [Bayesian Classification Library](https://github.com/shiffman/bayes-classifier-js)
 - Node text analysis packages
 
-**__Field Notes__**
-
-## Show Bots
-
-**__Field Notes__**
+__Notes: Text Analysis__
 
 ## Text Generation: Word2Vec and Grammars
 - Word2Vec
@@ -138,7 +139,7 @@ _This course focuses on programming strategies and techniques behind procedural 
   - [Tracery by Kate Compton](http://tracery.io/)
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-7-Homework)
 
-**__Field Notes__**
+__Notes: Text Generation__
 
 ## Text Generation: N-Grams, Markov chains, and LSTMs
 - [Notes on N-Grams and Markov Chains](http://shiffman.net/a2z/markov)
@@ -151,7 +152,7 @@ _This course focuses on programming strategies and techniques behind procedural 
   - client-side vs. server-side generation
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-8-Homework)
 
-**__Field Notes__**
+__Notes: N-Grams, Markov Chains and LSTMs__
 
 ## Building your own API in Node
 - [All examples](https://github.com/shiffman/A2Z-F17/tree/master/week9-node-api)
@@ -174,19 +175,19 @@ _This course focuses on programming strategies and techniques behind procedural 
   - spellcheck (with [node natural](https://github.com/NaturalNode/natural))
   - Bayesian text classification (with [node natural](https://github.com/NaturalNode/natural))
 
-**__Field Notes__**
+__Notes: Creating an API in Node__
 
 ## Chrome Extensions
 - [Notes on chrome extensions](http://shiffman.net/a2z/chrome-ext/)
 
-**__Field Notes__**
+__Notes: Chrome Extensions__
 
-## Final Presentations
+## Final Projects
 
-**__Field Notes__**
+__Notes: Final Projects__
 
 ## References and Inspiration
-- Moved to [references wiki](https://github.com/shiffman/A2Z-F17/wiki/References)
+- [References Wiki](https://github.com/shiffman/A2Z-F17/wiki/References)
 
 ## Tools
 - [p5.js](http://p5js.org)
@@ -194,8 +195,8 @@ _This course focuses on programming strategies and techniques behind procedural 
 - [p5.js CDN](http://cdnjs.com/libraries/p5.js)
 - [Node](http://nodejs.org/)
 - [RitaJS](https://github.com/dhowe/RiTaJS)
-- Firebug ([tutorial](http://www.developerfusion.com/article/139949/debugging-javascript-with-firebug/))
-- Sharing code snippets and asking questions: [gist.github.com](http://gist.github.com)
+- [Firebug: tutorial](http://www.developerfusion.com/article/139949/debugging-javascript-with-firebug/)
+- [Code Snippets and Questions: Gist](http://gist.github.com)
 
 ## JS reference books
 - [JavaScript: The Definitive Guide](http://shop.oreilly.com/product/9780596000486.do)
