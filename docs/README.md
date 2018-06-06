@@ -23,6 +23,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 - [JS reference books](#js-reference-books)
 - [Learning / Intro](#learning-intro)
 
+
 ## Intro
 - [Notes and Examples](http://shiffman.net/a2z/intro/)
 - [Glitch Example](https://glitch.com/edit/#!/a2z-diastic)
