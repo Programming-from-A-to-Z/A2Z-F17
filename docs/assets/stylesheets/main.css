@@ -45,6 +45,10 @@ a {
   color: rgb(3, 27, 78); /* DEEP BLUE */
 }
 
+.content-header a {
+  color: black;
+}
+
 .content-title {
   font-size: 22px;
   font-family: sans-serif;
