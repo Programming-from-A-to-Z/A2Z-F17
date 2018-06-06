@@ -23,6 +23,7 @@ _This course focuses on programming strategies and techniques behind procedural 
 - [JS reference books](#js-reference-books)
 - [Learning / Intro](#learning-intro)
 
+
 ## Intro
 - [Notes and Examples](http://shiffman.net/a2z/intro/)
 - [Glitch Example](https://glitch.com/edit/#!/a2z-diastic)
@@ -39,12 +40,6 @@ _This course focuses on programming strategies and techniques behind procedural 
 - [Homework Assignment](https://github.com/shiffman/A2Z-F17/wiki/Week-1-Homework)
 
 __Notes: Intro - P5.js, JavaScript and Strings__
-
-### Eloquent JavaScript: First 4 Chapters
-#### Chapter 1: Values, Types, and Operators
-#### Chapter 2: Program Structure
-#### Chapter 3: Functions
-#### Chapter 4: Data Structures, Objects, and Arrays
 
 ## Regular Expressions
 - [Notes and Examples](http://shiffman.net/a2z/regex/)

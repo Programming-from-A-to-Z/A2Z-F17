@@ -1,0 +1,65 @@
+
+/*
+COLORS:
+  deep blue - rgb(3, 27, 78)
+  digital blue - rgb(0, 105, 255)
+  dropbox blue - rgb(0, 105, 246)
+  hc2 green - rgb(143, 209, 106)
+  vivid purple - rgb(72, 0, 255)
+  red - rgb(255, 0, 0)
+  dev.to cream - #fdf9f3
+  dev.to off white  - #f9f9fa
+  dev.to teal  - #66e2d5
+  dev.to bg blue  - #dee4ff
+  dev.to outline blue  - #003ee6
+  dev.to shadow blue  - #0030b3
+
+STYLE NOTES:
+
+*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  background: #fdf9f3; /* CREAM */
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 0, 0); /* RED */
+}
+
+.main-header {
+  flex: 0 1 auto;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  color: rgb(3, 27, 78); /* DEEP BLUE */
+}
+
+.content-header a {
+  color: black;
+}
+
+.content-title {
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #dee4ff; /* DEV.TO LIGHT BLUE */
+}
+
+.logo-text {
+  background: #66e2d5; /* TEAL */
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: rgb(0, 105, 255); /* DIGITAL BLUE */
+  font-size: 28px;
+}
