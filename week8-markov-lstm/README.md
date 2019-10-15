@@ -13,7 +13,6 @@
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) by Andrej Karpathy
 * [Rohan & Lenny #3: Recurrent Neural Networks & LSTMs](https://ayearofai.com/rohan-lenny-3-recurrent-neural-networks-10300100899b)
 * [Recurrent Neural Networks in Tensorflow](https://www.tensorflow.org/versions/r0.10/tutorials/recurrent/)
-* [Siraj's RNN video](https://www.youtube.com/watch?v=cdLUzrjnlr4), [code on github](https://github.com/llSourcell/recurrent_neural_net_demo/blob/master/rnn.py)
 
 ### Creative Projects
 * [Writing with the Machine](https://www.robinsloan.com/notes/writing-with-the-machine/)
